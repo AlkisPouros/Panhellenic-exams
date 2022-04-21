@@ -1,0 +1,66 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>270</x><y>110</y><w>130</w><h>90</h></coordinates><panel_attributes>Χρήστης
+--
+username: String 
+password: String 
+A.M: id
+email: Email Address</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>190</y><w>160</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>140;10;140;80;10;80;10;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>110</x><y>310</y><w>170</w><h>120</h></coordinates><panel_attributes>Υποψήφιος
+--
+όνομα: String
+επώνυμο: String
+ημερομηνία γέννησης: Date
+αριθμός ταυτότητας: String 
+/μόρια: int
+/μέσος όρος μαθημάτων: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>310</y><w>230</w><h>90</h></coordinates><panel_attributes>Βαθμολογήτης
+--
+όνομα: String
+επώνυμο: String
+ιδιότητα γνωστικού αντικειμένου: Μάθημα</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>190</y><w>110</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80;90;80;90;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>530</y><w>180</w><h>80</h></coordinates><panel_attributes>Μαχανογραφικό 
+--
+id: int 
+ημερομηνία καταχώρησης:Date</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>520</y><w>140</w><h>90</h></coordinates><panel_attributes>Τμήμα Σχολής
+--
+όνομα τμήματος: String
+κωδικός τμήματος: int
+αριθμός εισακτέων: int
+/ΕΒΕ: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>540</y><w>130</w><h>50</h></coordinates><panel_attributes>Δηλωθέν Τμήμα
+--
+σειρά προτίμησης: int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>950</x><y>520</y><w>160</w><h>80</h></coordinates><panel_attributes>Επιστημονικό Πεδίο
+--
+όνομα: String
+αριθμό μαθημάτων: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>940</x><y>340</y><w>150</w><h>70</h></coordinates><panel_attributes>Μάθημα
+--
+όνομα: String
+συντελεστής: int 
+/Βαθμολογία: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>970</x><y>690</y><w>120</w><h>30</h></coordinates><panel_attributes>Ενδιαφερόμενος
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>350</y><w>100</w><h>60</h></coordinates><panel_attributes>Διαχειριστής
+--
+username: String
+password: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>420</y><w>80</w><h>130</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..1
+υποβάλει&gt;</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>550</y><w>160</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=1
+περιέχει&gt;</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>550</y><w>160</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+ανήκει&gt;</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>540</y><w>170</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1..2
+m2=*
+ανήκει&gt;</panel_attributes><additional_attributes>150;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1000</x><y>400</y><w>70</w><h>140</h></coordinates><panel_attributes>lt=-
+m1=4...*
+m2=1..4
+ανήκει&gt;</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>730</x><y>400</y><w>70</w><h>140</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+εισάγει&gt;</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>370</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+εισάγει&gt;</panel_attributes><additional_attributes>10;20;160;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1020</x><y>590</y><w>80</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=1
+αναζητεί&gt;</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>240</y><w>460</w><h>130</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=1
+βαθμολογεί&gt;</panel_attributes><additional_attributes>10;100;90;100;90;10;430;10;430;100</additional_attributes></element></diagram>
