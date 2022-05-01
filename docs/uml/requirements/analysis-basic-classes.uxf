@@ -14,7 +14,7 @@ email: Email Address</panel_attributes><additional_attributes></additional_attri
 --
 όνομα: String
 επώνυμο: String
-ιδιότητα γνωστικού αντικειμένου: Μάθημα</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>190</y><w>110</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80;90;80;90;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>530</y><w>180</w><h>80</h></coordinates><panel_attributes>Μαχανογραφικό 
+ιδιότητα γνωστικού αντικειμένου: Μάθημα</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>190</y><w>110</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80;90;80;90;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>530</y><w>180</w><h>80</h></coordinates><panel_attributes>Μηχανογραφικό 
 --
 id: int 
 ημερομηνία καταχώρησης:Date</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>520</y><w>140</w><h>90</h></coordinates><panel_attributes>Τμήμα Σχολής
@@ -46,7 +46,7 @@ m2=1
 m1=1
 m2=*
 ανήκει&gt;</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>540</y><w>170</w><h>50</h></coordinates><panel_attributes>lt=-
-m1=1..2
+m1=1
 m2=*
 ανήκει&gt;</panel_attributes><additional_attributes>150;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1000</x><y>400</y><w>70</w><h>140</h></coordinates><panel_attributes>lt=-
 m1=4...*
@@ -59,7 +59,7 @@ m1=1
 m2=*
 εισάγει&gt;</panel_attributes><additional_attributes>10;20;160;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1020</x><y>590</y><w>80</w><h>120</h></coordinates><panel_attributes>lt=-
 m1=*
-m2=1
+m2=*
 αναζητεί&gt;</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>240</y><w>460</w><h>130</h></coordinates><panel_attributes>lt=-
 m1=*
 m2=1
