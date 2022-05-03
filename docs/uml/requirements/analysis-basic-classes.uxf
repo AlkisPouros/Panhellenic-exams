@@ -9,8 +9,7 @@ email: Email Address</panel_attributes><additional_attributes></additional_attri
 επώνυμο: String
 ημερομηνία γέννησης: Date
 αριθμός ταυτότητας: String 
-/μόρια: int
-/μέσος όρος μαθημάτων: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>310</y><w>230</w><h>90</h></coordinates><panel_attributes>Βαθμολογήτης
+/μόρια: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>310</y><w>230</w><h>90</h></coordinates><panel_attributes>Βαθμολογήτης
 --
 όνομα: String
 επώνυμο: String
@@ -31,8 +30,7 @@ id: int
 αριθμό μαθημάτων: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>940</x><y>340</y><w>150</w><h>70</h></coordinates><panel_attributes>Μάθημα
 --
 όνομα: String
-συντελεστής: int 
-/Βαθμολογία: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>970</x><y>690</y><w>120</w><h>30</h></coordinates><panel_attributes>Ενδιαφερόμενος
+συντελεστής: decimal</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>970</x><y>690</y><w>120</w><h>30</h></coordinates><panel_attributes>Ενδιαφερόμενος
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>350</y><w>100</w><h>60</h></coordinates><panel_attributes>Διαχειριστής
 --
 username: String
@@ -45,7 +43,7 @@ m2=1
 περιέχει&gt;</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>550</y><w>160</w><h>50</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=*
-ανήκει&gt;</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>540</y><w>170</w><h>50</h></coordinates><panel_attributes>lt=-
+είναι&gt;</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>540</y><w>170</w><h>50</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=*
 ανήκει&gt;</panel_attributes><additional_attributes>150;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1000</x><y>400</y><w>70</w><h>140</h></coordinates><panel_attributes>lt=-
@@ -60,7 +58,13 @@ m2=*
 εισάγει&gt;</panel_attributes><additional_attributes>10;20;160;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1020</x><y>590</y><w>80</w><h>120</h></coordinates><panel_attributes>lt=-
 m1=*
 m2=*
-αναζητεί&gt;</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>240</y><w>460</w><h>130</h></coordinates><panel_attributes>lt=-
-m1=*
-m2=1
-βαθμολογεί&gt;</panel_attributes><additional_attributes>10;100;90;100;90;10;430;10;430;100</additional_attributes></element></diagram>
+αναζητεί&gt;</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>240</y><w>200</w><h>130</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+βαθμολογεί&gt;</panel_attributes><additional_attributes>10;100;90;100;90;10;180;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>730</x><y>210</y><w>150</w><h>70</h></coordinates><panel_attributes>Βαθμολογημένο Μάθημα
+--
+όνομα: String
+Βαθμολογία: decimal</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>240</y><w>190</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+είναι&gt;</panel_attributes><additional_attributes>140;100;140;10;10;10</additional_attributes></element></diagram>
