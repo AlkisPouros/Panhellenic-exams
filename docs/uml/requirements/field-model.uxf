@@ -4,7 +4,7 @@ password: String
 A.M: id-String
 email: Email Address-String
 UserMode: String
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>174</y><w>160</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>140;10;140;70;10;70;10;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>470</x><y>264</y><w>230</w><h>90</h></coordinates><panel_attributes>Examiner
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>174</y><w>160</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>140;10;140;70;10;70;10;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>470</x><y>264</y><w>230</w><h>80</h></coordinates><panel_attributes>Examiner
 --
 firstName: String
 lastName: String
@@ -24,30 +24,28 @@ name: String
 --
 lessonName: String
 coefficient: double
-field:ScientificField</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>820</x><y>64</y><w>120</w><h>70</h></coordinates><panel_attributes>Admin
+field:ScientificField</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>780</x><y>104</y><w>120</w><h>70</h></coordinates><panel_attributes>Admin
 --
 username: String
 password: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>394</y><w>80</w><h>300</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=0..1
 υποβάλει&gt;</panel_attributes><additional_attributes>10;10;10;280</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>714</y><w>470</w><h>50</h></coordinates><panel_attributes>lt=-
-m1=1
-m2=1
+m1=*
+m2=*
 περιέχει&gt;                                                    </panel_attributes><additional_attributes>450;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1060</x><y>684</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=*
 ανήκει&gt;</panel_attributes><additional_attributes>100;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1210</x><y>414</y><w>70</w><h>270</h></coordinates><panel_attributes>lt=-
 m1=4...*
 m2=1..4
-ανήκει&gt;</panel_attributes><additional_attributes>10;10;10;250</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>244</y><w>570</w><h>120</h></coordinates><panel_attributes>lt=-
+ανήκει&gt;</panel_attributes><additional_attributes>10;10;10;250</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>244</y><w>200</w><h>80</h></coordinates><panel_attributes>lt=-
 m1=1
-m2=1
-βαθμολογεί&gt;</panel_attributes><additional_attributes>10;50;60;50;60;10;540;10;540;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>850</x><y>304</y><w>190</w><h>60</h></coordinates><panel_attributes>Marked Lesson
+m2=*
+βαθμολογεί&gt;</panel_attributes><additional_attributes>10;50;60;50;60;10;180;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>870</x><y>234</y><w>190</w><h>40</h></coordinates><panel_attributes>Marked Lesson
 --
-mark: Double
-CandidateID: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>664</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=.
-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>930</x><y>244</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=.
-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>624</y><w>270</w><h>50</h></coordinates><panel_attributes>Registered Department
+mark: Double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>664</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=.
+</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>624</y><w>270</w><h>50</h></coordinates><panel_attributes>Registered Department
 --
 position: int
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>130</x><y>264</y><w>310</w><h>140</h></coordinates><panel_attributes>Candidate
@@ -60,4 +58,10 @@ AvailableDepartmentsperUser:List
 mixanografiko:Mixanografiko
 moria: int
 
-</panel_attributes><additional_attributes></additional_attributes></element></diagram>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1050</x><y>244</y><w>270</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+είναι&gt;</panel_attributes><additional_attributes>220;100;220;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>264</y><w>650</w><h>240</h></coordinates><panel_attributes>lt=-
+m1=4...*
+m2=*
+βαθμολογείται&gt;</panel_attributes><additional_attributes>610;10;610;220;10;220;10;140</additional_attributes></element></diagram>
