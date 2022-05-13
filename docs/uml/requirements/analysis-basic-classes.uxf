@@ -94,8 +94,8 @@ password: String</panel_attributes><additional_attributes></additional_attribute
 m1=1
 m2=0..1
 υποβάλει&gt;</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>770</y><w>450</w><h>50</h></coordinates><panel_attributes>lt=-
-m1=1
-m2=1
+m1=*
+m2=*
 περιέχει&gt;                                                    </panel_attributes><additional_attributes>430;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>910</x><y>740</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
 m1=1
 m2=*
