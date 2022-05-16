@@ -18,6 +18,10 @@ public class Department {
         this.field = field;
     }
 
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
     public int getRemainingPositions() {
         return remainingPositions;
     }

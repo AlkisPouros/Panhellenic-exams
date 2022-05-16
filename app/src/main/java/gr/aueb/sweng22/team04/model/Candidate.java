@@ -37,6 +37,10 @@ public class Candidate extends User{
         Helper.allCandidates.add(candidate);
     }
 
+    public Department getFinalDepartment() {
+        return finalDepartment;
+    }
+
     public void setFinalDepartment(Department finalDepartment) {
         this.finalDepartment = finalDepartment;
     }

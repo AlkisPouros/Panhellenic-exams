@@ -12,7 +12,7 @@ position: int
 department:Department
 --
 RegisteredDepartment(position,department):void
-&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;ida)i</help_text><element><id>UMLClass</id><coordinates><x>420</x><y>0</y><w>260</w><h>260</h></coordinates><panel_attributes>User
+&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;ida)i</help_text><element><id>UMLClass</id><coordinates><x>350</x><y>0</y><w>260</w><h>260</h></coordinates><panel_attributes>User
 --
 password: String 
 id: int
@@ -29,7 +29,7 @@ setId(id):void
 getEmail():String
 setEmail(email): void
 getUserMode():String
-setUserMode(UserMode):void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>250</y><w>160</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>140;10;140;50;10;50;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>320</y><w>410</w><h>530</h></coordinates><panel_attributes>Candidate
+setUserMode(UserMode):void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>250</y><w>160</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>140;10;140;60;10;60;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>330</y><w>410</w><h>540</h></coordinates><panel_attributes>Candidate
 --
 name: String
 lastName: String
@@ -45,6 +45,7 @@ finalDepartment:Department
 Candidate(password,email,name,lastName,birthday,idNumber,field):void
 loginCandidate(email,password):Boolean
 signUp(password,email,name,lastName,birthday,idNumber,field):void
+getFinalDepartment():Department
 setFinalDepartment(finalDepartment):void
 getName():String
 setName(name):void
@@ -65,7 +66,7 @@ calculateMarks():void
 addMark(markedLesson):void
 getAllMarks():List
 findAvailableDepartments():void
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>320</y><w>230</w><h>230</h></coordinates><panel_attributes>Examiner
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>330</y><w>230</w><h>230</h></coordinates><panel_attributes>Examiner
 --
 firstName: String
 lastName: String
@@ -80,7 +81,7 @@ setFirstName(firstName):void
 getLastName():String
 setLastName(lastName):void
 getAcademicRole():Lesson
-assignAcademicRole(academicRole):void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>250</y><w>130</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50;110;50;110;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>170</x><y>930</y><w>180</w><h>140</h></coordinates><panel_attributes>Mixanografiko
+assignAcademicRole(academicRole):void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>250</y><w>130</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60;110;60;110;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>950</y><w>180</w><h>140</h></coordinates><panel_attributes>Mixanografiko
 --
 mixanografikoID: int 
 registrationDate:Date
@@ -89,7 +90,7 @@ registeredDepartment:List
 mixanografiko():void
 registerDepartment(position, department):void
 getRegistrationDate():Date
-getRegisteredDepartments():List</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>920</y><w>320</w><h>260</h></coordinates><panel_attributes>Department
+getRegisteredDepartments():List</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>700</x><y>930</y><w>320</w><h>270</h></coordinates><panel_attributes>Department
 --
 departmentName: String
 departmentID: int
@@ -100,20 +101,22 @@ remainingPositions:int
 enterBase:int
 --
 Department(dapartmentName, departmentID,maxNumberOfCandidates,field):void
+getDepartmentName():String
 getRemainingPositions():int
 setEBE(EBE):void
 getEnterBase():int
 setEnterBase(enterBase):int
 setRemainingPositions(remainingPositions):void
 getEBE():int
-getField():ScientificField</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1200</x><y>920</y><w>210</w><h>110</h></coordinates><panel_attributes>Scientific Field
+getField():ScientificField</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1130</x><y>940</y><w>210</w><h>130</h></coordinates><panel_attributes>Scientific Field
 --
 name: String
 noLesson: int
 lessonPerField():Set
 --
 ScientficField(name, noLesson):void
-setLesson(lesson):void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1190</x><y>460</y><w>240</w><h>140</h></coordinates><panel_attributes>Lesson
+setLesson(lesson):void
+getName():String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1120</x><y>480</y><w>240</w><h>140</h></coordinates><panel_attributes>Lesson
 --
 lessonName: String
 coefficient: double
@@ -122,22 +125,22 @@ field: ScientificField
 Lesson(lessonName, coefficient, field):void
 getLessonName():String
 getCoefficient():double
-getField():ScientificField</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>120</y><w>120</w><h>80</h></coordinates><panel_attributes>Admin
+getField():ScientificField</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>790</x><y>140</y><w>120</w><h>80</h></coordinates><panel_attributes>Admin
 --
 username: String
-password: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>840</y><w>80</w><h>110</h></coordinates><panel_attributes>lt=-&gt;
+password: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>860</y><w>80</w><h>110</h></coordinates><panel_attributes>lt=-&gt;
 m1=1
 m2=0..1
-υποβάλει&gt;</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>970</y><w>450</w><h>50</h></coordinates><panel_attributes>lt=-&gt;
+υποβάλει&gt;</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>990</y><w>450</w><h>50</h></coordinates><panel_attributes>lt=-&gt;
 m1=*
 m2=*
-περιέχει&gt;                                                    </panel_attributes><additional_attributes>10;20;430;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1080</x><y>940</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+περιέχει&gt;                                                    </panel_attributes><additional_attributes>10;20;430;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1010</x><y>960</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
 m1=1
 m2=*
-ανήκει&gt;</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1300</x><y>590</y><w>70</w><h>350</h></coordinates><panel_attributes>lt=&lt;-&gt;
+ανήκει&gt;</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1230</x><y>610</y><w>70</w><h>350</h></coordinates><panel_attributes>lt=&lt;-&gt;
 m1=4
 m2=1..4
-ανήκει&gt;</panel_attributes><additional_attributes>10;10;10;330</additional_attributes></element><element><id>UMLClass</id><coordinates><x>900</x><y>340</y><w>240</w><h>140</h></coordinates><panel_attributes>Marked Lesson
+ανήκει&gt;</panel_attributes><additional_attributes>10;10;10;330</additional_attributes></element><element><id>UMLClass</id><coordinates><x>830</x><y>360</y><w>240</w><h>140</h></coordinates><panel_attributes>Marked Lesson
 --
 lesson:Lesson
 mark:double
@@ -146,30 +149,30 @@ examiner:Examiner
 MarkedLesson(lesson, mark,examiner):void
 getLesson():Lesson
 getMark():double
-getExaminer():Examiner</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>950</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=.
-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>870</y><w>270</w><h>90</h></coordinates><panel_attributes>Registered Department
+getExaminer():Examiner</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>970</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=.
+</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>890</y><w>270</w><h>90</h></coordinates><panel_attributes>Registered Department
 --
 position: int
 department:Department
 --
 RegisteredDepartment(position,department):void
 getDepartment():Department
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>469</y><w>630</w><h>180</h></coordinates><panel_attributes>lt=-&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>489</y><w>630</w><h>180</h></coordinates><panel_attributes>lt=-&gt;
 m1=4
 m2=1
-βαθμολογείται&gt;</panel_attributes><additional_attributes>530;10;530;150;10;150</additional_attributes></element><element><id>Relation</id><coordinates><x>732</x><y>360</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+βαθμολογείται&gt;</panel_attributes><additional_attributes>530;10;530;150;10;150</additional_attributes></element><element><id>Relation</id><coordinates><x>662</x><y>370</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
 m1=1
 m2=*
-βαθμολογεί&gt;</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1132</x><y>360</y><w>230</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+βαθμολογεί&gt;</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1062</x><y>380</y><w>230</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
 m1=1
 m2=*
-είναι&gt;</panel_attributes><additional_attributes>180;100;180;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>699</y><w>810</w><h>240</h></coordinates><panel_attributes>lt=-&gt;
+είναι&gt;</panel_attributes><additional_attributes>180;100;180;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>719</y><w>810</w><h>240</h></coordinates><panel_attributes>lt=-&gt;
 m1=*
 m2=1
-συμμετέχει&gt;</panel_attributes><additional_attributes>10;20;780;20;780;220</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>739</y><w>430</w><h>200</h></coordinates><panel_attributes>lt=-&gt;
+συμμετέχει&gt;</panel_attributes><additional_attributes>10;20;780;20;780;220</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>759</y><w>430</w><h>190</h></coordinates><panel_attributes>lt=-&gt;
 m1=*
 m2=*
-διατίθενται&gt;</panel_attributes><additional_attributes>10;20;410;20;410;180</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>249</y><w>690</w><h>230</h></coordinates><panel_attributes>lt=-&gt;
+διατίθενται&gt;</panel_attributes><additional_attributes>10;20;410;20;410;170</additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>269</y><w>690</w><h>230</h></coordinates><panel_attributes>lt=-&gt;
 m1=*
 m2=1
-ανατίθεται&gt;</panel_attributes><additional_attributes>10;70;10;20;660;20;660;210</additional_attributes></element></diagram>
+ανατίθεται&gt;</panel_attributes><additional_attributes>10;60;10;20;660;20;660;210</additional_attributes></element></diagram>
