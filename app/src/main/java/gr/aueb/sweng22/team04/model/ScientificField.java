@@ -18,4 +18,7 @@ public class ScientificField {
         this.lessonPerField.add(lesson);
     }
 
+    public String getName() {
+        return this.name;
+    }
 }

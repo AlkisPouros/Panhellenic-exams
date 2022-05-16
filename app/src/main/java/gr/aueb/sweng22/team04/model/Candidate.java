@@ -74,7 +74,7 @@ public class Candidate extends User{
     }
 
     public ArrayList<Department> getAvailableDepartmentperUser() {
-        return availableDepartmentperUser;
+        return this.availableDepartmentperUser;
     }
 
     public void setAvailableDepartmentperUser(ArrayList<Department> availableDepartmentperUser) {
@@ -108,7 +108,7 @@ public class Candidate extends User{
             totalMark += lesson.getMark() * (2 + lesson.getLesson().getCoefficient());
         }
         totalMark *= 100;
-        setMoria((int) totalMark);
+        this.setMoria((int) totalMark);
     }
 
     public void addMark(MarkedLesson markedLesson){
@@ -120,11 +120,10 @@ public class Candidate extends User{
     }
 
     public void findAvailableDepartments(){
-        for(Department department : Helper.allDepartments){
-            if(this.getMoria() >= department.getEBE() && this.getField().equals(department.getField())){
+        for(Department department : Helper.allDepartments) {
+            if (this.getMoria() >= department.getEBE() && this.getField().getName().equals(department.getField().getName())) {
                 this.availableDepartmentperUser.add(department);
             }
         }
-        this.setAvailableDepartmentperUser(this.availableDepartmentperUser);
     }
 }

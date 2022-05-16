@@ -48,12 +48,16 @@ public class Helper {
 
     public void initialiseExaminers(){
         Examiner examiner = new Examiner("examiner", "examiner", "1234", "exam@gmail.com");
+        examiner.assignAcademicRole(allLessons.get(0));
         allExaminers.add(examiner);
         examiner = new Examiner("examiner1", "examiner1", "12342321", "exam1@gmail.com");
+        examiner.assignAcademicRole(allLessons.get(1));
         allExaminers.add(examiner);
         examiner = new Examiner("examiner2", "examiner2", "12345241", "exam2@gmail.com");
+        examiner.assignAcademicRole(allLessons.get(2));
         allExaminers.add(examiner);
         examiner = new Examiner("examiner3", "examiner3", "12346743", "exam3@gmail.com");
+        examiner.assignAcademicRole(allLessons.get(3));
         allExaminers.add(examiner);
     }
 
@@ -97,12 +101,11 @@ public class Helper {
 
     public static void main(String [] args){
         Helper helper = new Helper();
-        while(true) {
-            helper.initialiseScientificFields();
-            helper.initialiseExaminers();
-            helper.initialiseDepartments();
-            helper.initialiseLessons();
-            helper.initialiseCandidates();
-        }
+
+        helper.initialiseScientificFields();
+        helper.initialiseLessons();
+        helper.initialiseExaminers();
+        helper.initialiseDepartments();
+        helper.initialiseCandidates();
     }
 }

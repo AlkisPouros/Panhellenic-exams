@@ -7,6 +7,8 @@ import org.junit.Test;
 
 import java.util.Date;
 
+import gr.aueb.sweng22.team04.Helper;
+
 public class CandidateTest {
 
     Candidate candidate;
@@ -27,6 +29,13 @@ public class CandidateTest {
         examiner3.assignAcademicRole(new Lesson("ekthesi", 0, field));
         examiner4 = new Examiner("examiner", "examiner", "1234", "exam@gmail.com");
         examiner4.assignAcademicRole(new Lesson("AEPP", 0, field));
+
+        Helper helper = new Helper();
+        helper.initialiseScientificFields();
+        helper.initialiseLessons();
+        helper.initialiseExaminers();
+        helper.initialiseDepartments();
+        helper.initialiseCandidates();
     }
 
     @Test
@@ -59,9 +68,18 @@ public class CandidateTest {
 
     @Test
     public void findAvailableDepartments(){
-        candidate.findAvailableDepartments();
+        MarkedLesson markedLesson = new MarkedLesson(examiner.getAcademicRole(), 19, examiner);
+        candidate.addMark(markedLesson);
+        markedLesson = new MarkedLesson(examiner2.getAcademicRole(), 19.5, examiner2);
+        candidate.addMark(markedLesson);
+        markedLesson = new MarkedLesson(examiner3.getAcademicRole(), 16, examiner3);
+        candidate.addMark(markedLesson);
+        markedLesson = new MarkedLesson(examiner4.getAcademicRole(), 19, examiner4);
+        candidate.addMark(markedLesson);
         candidate.calculateMarks();
-        assertEquals(2, candidate.getAvailableDepartmentperUser().size());
 
+        candidate.findAvailableDepartments();
+        assertEquals(4, Helper.allDepartments.size());
+        assertEquals(3, candidate.getAvailableDepartmentperUser().size());
     }
 }

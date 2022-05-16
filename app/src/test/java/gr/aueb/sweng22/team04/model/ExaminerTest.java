@@ -7,6 +7,8 @@ import org.junit.Test;
 
 import java.util.Date;
 
+import gr.aueb.sweng22.team04.Helper;
+
 public class ExaminerTest {
 
     Examiner examiner;
@@ -18,6 +20,13 @@ public class ExaminerTest {
         examiner2 = new Examiner("examiner2", "examiner2", "12345", "examiner@gmail.com");
         ScientificField field = new ScientificField("4o pedio", 4);
         candidate = new Candidate("1234", "hello@gmail.com", "tester", "tester", new Date(), "AK789658", field);
+
+        Helper helper = new Helper();
+        helper.initialiseScientificFields();
+        helper.initialiseLessons();
+        helper.initialiseExaminers();
+        helper.initialiseDepartments();
+        helper.initialiseCandidates();
     }
 
     @Test
@@ -32,6 +41,8 @@ public class ExaminerTest {
         ScientificField field = new ScientificField("4o pedio", 4);
         Candidate candidate2 = new Candidate("1234736", "hello543@gmail.com", "tester35", "tester543", new Date(), "AK785858", field);
 
+        Helper.allCandidates.add(candidate);
+        Helper.allCandidates.add(candidate2);
         assertSame(candidate, examiner.findCandidate(candidate.getId()));
         assertNotSame(candidate, examiner.findCandidate(candidate2.getId()));
     }
