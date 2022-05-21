@@ -19,7 +19,7 @@ public class CandidateTest {
     Examiner examiner4;
     @Before
     public void setUp() throws Exception {
-        field = new ScientificField("4o pedio", 4);
+        field = new ScientificField(4,"4o pedio", 4);
         candidate = new Candidate("1234", "hello@gmail.com", "tester", "tester", new Date(), "AK457841", field);
         examiner = new Examiner("examiner", "examiner", "1234", "exam@gmail.com");
         examiner.assignAcademicRole(new Lesson("math", 1.3, field));

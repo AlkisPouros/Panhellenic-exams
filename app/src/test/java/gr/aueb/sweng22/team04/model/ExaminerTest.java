@@ -18,7 +18,7 @@ public class ExaminerTest {
     public void setUp() throws Exception {
         examiner = new Examiner("examiner", "examiner", "1234", "exam@gmail.com");
         examiner2 = new Examiner("examiner2", "examiner2", "12345", "examiner@gmail.com");
-        ScientificField field = new ScientificField("4o pedio", 4);
+        ScientificField field = new ScientificField(4,"4o pedio", 4);
         candidate = new Candidate("1234", "hello@gmail.com", "tester", "tester", new Date(), "AK789658", field);
 
         Helper helper = new Helper();
@@ -38,7 +38,7 @@ public class ExaminerTest {
 
     @Test
     public void findCandidate() {
-        ScientificField field = new ScientificField("4o pedio", 4);
+        ScientificField field = new ScientificField(4,"4o pedio", 4);
         Candidate candidate2 = new Candidate("1234736", "hello543@gmail.com", "tester35", "tester543", new Date(), "AK785858", field);
 
         Helper.allCandidates.add(candidate);

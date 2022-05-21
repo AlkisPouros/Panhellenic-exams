@@ -5,16 +5,21 @@ import java.util.Set;
 
 public class ScientificField {
 
+    private int ID;
     private String name;
     private int noLesson;
     private Set<Lesson> lessonPerField = new HashSet<Lesson>();
 
-    public ScientificField(String name, int noLesson) {
+    public ScientificField(int ID, String name, int noLesson) {
         this.name = name;
         this.noLesson = noLesson;
     }
 
-    public void setLesson(Lesson lesson){
+    public int getID() {
+        return ID;
+    }
+
+    public void addLesson(Lesson lesson){
         this.lessonPerField.add(lesson);
     }
 

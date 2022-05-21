@@ -18,6 +18,10 @@ public class Department {
         this.field = field;
     }
 
+    public int getDepartmentID() {
+        return departmentID;
+    }
+
     public String getDepartmentName() {
         return departmentName;
     }

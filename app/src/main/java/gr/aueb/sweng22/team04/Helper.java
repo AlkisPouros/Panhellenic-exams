@@ -21,13 +21,13 @@ public class Helper {
     public static ArrayList<Candidate> allCandidates = new ArrayList<>();
 
     public void initialiseScientificFields(){
-        ScientificField field = new ScientificField("1o pedio", 4);
+        ScientificField field = new ScientificField(1,"1o pedio", 4);
         ScientificFields.add(field);
-        field = new ScientificField("2o pedio", 4);
+        field = new ScientificField(2,"2o pedio", 4);
         ScientificFields.add(field);
-        field = new ScientificField("3o pedio", 4);
+        field = new ScientificField(3,"3o pedio", 4);
         ScientificFields.add(field);
-        field = new ScientificField("4o pedio", 4);
+        field = new ScientificField(4,"4o pedio", 4);
         ScientificFields.add(field);
     }
 
@@ -63,16 +63,16 @@ public class Helper {
 
     public void initialiseLessons(){
         Lesson lesson = new Lesson("Math", 1.3, ScientificFields.get(3));
-        ScientificFields.get(3).setLesson(lesson);
+        ScientificFields.get(3).addLesson(lesson);
         allLessons.add(lesson);
         lesson = new Lesson("AOTH", 0.7, ScientificFields.get(3));
-        ScientificFields.get(3).setLesson(lesson);
+        ScientificFields.get(3).addLesson(lesson);
         allLessons.add(lesson);
         lesson = new Lesson("AEPP", 0, ScientificFields.get(3));
-        ScientificFields.get(3).setLesson(lesson);
+        ScientificFields.get(3).addLesson(lesson);
         allLessons.add(lesson);
         lesson = new Lesson("Ekthesi", 0, ScientificFields.get(3));
-        ScientificFields.get(3).setLesson(lesson);
+        ScientificFields.get(3).addLesson(lesson);
         allLessons.add(lesson);
     }
 

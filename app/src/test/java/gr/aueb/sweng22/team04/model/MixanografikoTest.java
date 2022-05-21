@@ -8,7 +8,7 @@ public class MixanografikoTest {
 
     @Test
     public void registerDepartment(){
-        ScientificField field = new ScientificField("4o pedio", 4);
+        ScientificField field = new ScientificField(4,"4o pedio", 4);
         Mixanografiko mixanografiko = new Mixanografiko();
         Department department1 = new Department("OPA", 333, 120, field);
         department1.setEBE(15000);

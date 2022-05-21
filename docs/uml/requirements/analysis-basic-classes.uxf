@@ -56,15 +56,13 @@ getMixanografiko():Mixanografiko
 getMoria():int 
 setMoria():void
 getAllMarks():List
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>330</y><w>230</w><h>220</h></coordinates><panel_attributes>Examiner
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>330</y><w>230</w><h>200</h></coordinates><panel_attributes>Examiner
 --
 firstName: String
 lastName: String
 --
 Examiner(firstName,lastName,password,email):void
 loginExaminer(email,password):Boolean
-findCandidate(idCandidate):Candidate
-saveMarks(idCandidate,mark):void
 getFirstName():String
 setFirstName(firstName):void
 getLastName():String
@@ -94,13 +92,14 @@ getEnterBase():int
 setEnterBase(enterBase):int
 setRemainingPositions(remainingPositions):void
 getEBE():int
-getField():ScientificField</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1130</x><y>940</y><w>210</w><h>100</h></coordinates><panel_attributes>Scientific Field
+getField():ScientificField</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1130</x><y>940</y><w>210</w><h>110</h></coordinates><panel_attributes>Scientific Field
 --
 name: String
 noLesson: int
 --
 ScientficField(name, noLesson):void
-getName():String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1120</x><y>480</y><w>240</w><h>130</h></coordinates><panel_attributes>Lesson
+getName():String
+addLesson(Lesson):void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1120</x><y>480</y><w>240</w><h>130</h></coordinates><panel_attributes>Lesson
 --
 lessonName: String
 coefficient: double
