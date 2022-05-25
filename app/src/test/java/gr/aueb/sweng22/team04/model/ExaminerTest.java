@@ -7,8 +7,6 @@ import org.junit.Test;
 
 import java.util.Date;
 
-import gr.aueb.sweng22.team04.Helper;
-
 public class ExaminerTest {
 
     Examiner examiner;

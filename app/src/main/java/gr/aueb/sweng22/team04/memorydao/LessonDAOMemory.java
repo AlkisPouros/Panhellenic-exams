@@ -7,20 +7,19 @@ import gr.aueb.sweng22.team04.model.Lesson;
 
 public class LessonDAOMemory implements LessonDAO {
 
-    protected static ArrayList<Lesson> entities = new ArrayList<Lesson>();
+    protected static ArrayList<Lesson> lessonEntities = new ArrayList<Lesson>();
 
     @Override
-    public void add(Lesson entity) {
-        entities.add(entity);
+    public void addLesson(Lesson entity) {
+        lessonEntities.add(entity);
     }
 
-    public Lesson findByName(String name) {
-        for (Lesson now : entities)
-            if (now.getLessonName() == name)
+    public Lesson findLessonByName(String name) {
+        for (Lesson now : lessonEntities) {
+            if (now.getLessonName() == name) {
                 return now;
-
+            }
+        }
         return null;
     }
-
-
 }

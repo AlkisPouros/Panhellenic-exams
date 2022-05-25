@@ -3,8 +3,6 @@ package gr.aueb.sweng22.team04.model;
 import java.util.Date;
 import java.util.ArrayList;
 
-import gr.aueb.sweng22.team04.Helper;
-
 public class Candidate extends User{
 
     private String name;
@@ -34,7 +32,7 @@ public class Candidate extends User{
 
     public void signUp(String password, String email, String name, String lastName, Date birthday, String idNumber, ScientificField field){
         Candidate candidate = new Candidate(password, email, name, lastName, birthday, idNumber, field);
-        Helper.allCandidates.add(candidate);
+        //Helper.allCandidates.add(candidate);
     }
 
     public Department getFinalDepartment() {
@@ -80,11 +78,11 @@ public class Candidate extends User{
     public ArrayList<Department> getAvailableDepartmentperUser() {
         return this.availableDepartmentperUser;
     }
-
+    /*
     public void setAvailableDepartmentperUser(ArrayList<Department> availableDepartmentperUser) {
         this.availableDepartmentperUser = availableDepartmentperUser;
     }
-
+    */
     public ScientificField getField() {
         return field;
     }
@@ -92,12 +90,12 @@ public class Candidate extends User{
     public Mixanografiko getMixanografiko() {
         return mixanografiko;
     }
-
+    /*
     public void createMixanografiko() {
         this.mixanografiko = new Mixanografiko();
         this.findAvailableDepartments();
     }
-
+    */
     public int getMoria() {
         return moria;
     }
@@ -105,7 +103,7 @@ public class Candidate extends User{
     public void setMoria(int moria) {
         this.moria = moria;
     }
-
+    /*
     public void calculateMarks(){
         double totalMark = 0;
         for(MarkedLesson lesson: this.allMarks){
@@ -118,11 +116,11 @@ public class Candidate extends User{
     public void addMark(MarkedLesson markedLesson){
         this.allMarks.add(markedLesson);
     }
-
+    */
     public ArrayList<MarkedLesson> getAllMarks(){
         return this.allMarks;
     }
-
+    /*
     public void findAvailableDepartments(){
         for(Department department : Helper.allDepartments) {
             if (this.getMoria() >= department.getEBE() && this.getField().getName().equals(department.getField().getName())) {
@@ -130,4 +128,5 @@ public class Candidate extends User{
             }
         }
     }
+    */
 }

@@ -6,20 +6,21 @@ import gr.aueb.sweng22.team04.dao.CandidateDAO;
 import gr.aueb.sweng22.team04.model.Candidate;
 
 public class CandidateDAOMemory implements CandidateDAO {
-    protected static ArrayList<Candidate> entities = new ArrayList<Candidate>();
+    protected static ArrayList<Candidate> candidateEntities = new ArrayList<Candidate>();
 
     @Override
-    public void add(Candidate entity) {
-        entities.add(entity);
+    public void addCandidate(Candidate entity) {
+        candidateEntities.add(entity);
     }
 
     @Override
-    public Candidate find(int ID) {
-        for (Candidate now : entities)
-            if (now.getId() == ID)
-                return now;
-
+    public Candidate findCandidate(String email, String password) {
+        System.out.println(candidateEntities.size());
+        for (Candidate candidate : candidateEntities){
+            if (candidate.getEmail().equals(email) && candidate.getPassword().equals(password)) {
+                return candidate;
+            }
+        }
         return null;
     }
-
 }

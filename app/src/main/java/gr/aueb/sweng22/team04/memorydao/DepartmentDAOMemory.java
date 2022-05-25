@@ -7,20 +7,20 @@ import gr.aueb.sweng22.team04.model.Department;
 
 public class DepartmentDAOMemory implements DepartmentDAO {
 
-    protected static ArrayList<Department> entities = new ArrayList<Department>();
+    protected static ArrayList<Department> departmentEntities = new ArrayList<Department>();
 
     @Override
-    public void add(Department entity) {
-        entities.add(entity);
+    public void addDepartment(Department entity) {
+        departmentEntities.add(entity);
     }
 
     @Override
-    public Department find(int ID) {
-        for (Department now : entities)
-            if (now.getDepartmentID() == ID)
-                return now;
-
+    public Department findDepartment(int ID) {
+        for (Department department : departmentEntities) {
+            if (department.getDepartmentID() == ID) {
+                return department;
+            }
+        }
         return null;
     }
-
 }

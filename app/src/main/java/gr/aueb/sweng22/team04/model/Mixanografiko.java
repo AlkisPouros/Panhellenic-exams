@@ -19,12 +19,12 @@ public class Mixanografiko {
     public int getMixanografikoID() {
         return mixanografikoID;
     }
-
+    /*
     public void registerDepartment(int position, Department department){
         RegisteredDepartment registeredDepartment = new RegisteredDepartment(position, department);
         this.registeredDepartments.add(registeredDepartment);
     }
-
+    */
     public Date getRegistrationDate() {
         return registrationDate;
     }

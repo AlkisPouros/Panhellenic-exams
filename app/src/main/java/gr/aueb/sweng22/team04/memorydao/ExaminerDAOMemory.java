@@ -4,22 +4,22 @@ import java.util.ArrayList;
 
 import gr.aueb.sweng22.team04.dao.ExaminerDAO;
 import gr.aueb.sweng22.team04.model.Examiner;
-import gr.aueb.sweng22.team04.model.Examiner;
 
 public class ExaminerDAOMemory implements ExaminerDAO {
-    protected static ArrayList<Examiner> entities = new ArrayList<Examiner>();
+    protected static ArrayList<Examiner> examinerEntities = new ArrayList<Examiner>();
 
     @Override
-    public void add(Examiner entity) {
-        entities.add(entity);
+    public void addExaminer(Examiner entity) {
+        examinerEntities.add(entity);
     }
 
     @Override
-    public Examiner find(int ID) {
-        for (Examiner now : entities)
-            if (now.getId() == ID)
-                return now;
-
+    public Examiner findExaminer(int ID) {
+        for (Examiner examiner : examinerEntities) {
+            if (examiner.getId() == ID) {
+                return examiner;
+            }
+        }
         return null;
     }
 }
