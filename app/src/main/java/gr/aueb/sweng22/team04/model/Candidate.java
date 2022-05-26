@@ -7,7 +7,7 @@ public class Candidate extends User{
 
     private String name;
     private String lastName;
-    private Date birthday;
+    private String birthday;
     private String idNumber;
     private ArrayList<Department> availableDepartmentperUser = new ArrayList<Department>();
     private ArrayList<MarkedLesson> allMarks = new ArrayList<MarkedLesson>();
@@ -17,7 +17,7 @@ public class Candidate extends User{
     private Department finalDepartment;
 
 
-    public Candidate(String password, String email, String name, String lastName, Date birthday, String idNumber, ScientificField field) {
+    public Candidate(String password, String email, String name, String lastName, String birthday, String idNumber, ScientificField field) {
         super(password, email, "Candidate");
         this.name = name;
         this.lastName = lastName;
@@ -30,7 +30,7 @@ public class Candidate extends User{
         return loginUser(email, password);
     }
 
-    public void signUp(String password, String email, String name, String lastName, Date birthday, String idNumber, ScientificField field){
+    public void signUp(String password, String email, String name, String lastName, String birthday, String idNumber, ScientificField field){
         Candidate candidate = new Candidate(password, email, name, lastName, birthday, idNumber, field);
         //Helper.allCandidates.add(candidate);
     }
@@ -59,11 +59,11 @@ public class Candidate extends User{
         this.lastName = lastName;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 

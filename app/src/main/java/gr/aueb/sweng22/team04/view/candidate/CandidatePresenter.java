@@ -32,14 +32,18 @@ public class CandidatePresenter {
     void onCalculateMarks()
     {
         double totalMark = 0;
+        /*
         for(MarkedLesson markedLesson: this.markedLessonDAO.getMarkedLessons()){
             totalMark += markedLesson.getMark() * (2 + markedLesson.getLesson().getCoefficient());
         }
+
+         */
         totalMark *= 100;
         this.candidateDAO.findCandidate("email","password").setMoria((int) totalMark);
     }
      void onFindAvailableDepartments()
      {
+         /*
         for(Department department : this.departmentDAO.getDepartments())
         {
             if(this.candidateDAO.findCandidate("email","password").getMoria()>= department.getEBE() && this.candidateDAO.findCandidate("email","password").getField().getName().equals(department.getField().getName()))
@@ -47,7 +51,6 @@ public class CandidatePresenter {
                 this.candidateDAO.getAvailableDeparmtentsperUser().add(department);
             }
         }
-
+          */
      }
-
 }

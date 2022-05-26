@@ -30,6 +30,7 @@ public class MixanografikoPresenter {
         this.mixanografikoDAO.addMixanografiko(mixanografiko);
         int counter = 0;
 
+        /*
         for(Department department : this.candidateDAO.getAvailableDeparmtentsperUser())
         {
             counter++;  // the new department's position
@@ -38,6 +39,7 @@ public class MixanografikoPresenter {
             this.registeredDepartmentDAO.addRegisteredDepartment(registeredDepartment); // Adding these new submitted departments to the memory
             this.mixanografikoDAO.addMixanografiko(mixanografiko);
         }
+         */
     }
 
 }

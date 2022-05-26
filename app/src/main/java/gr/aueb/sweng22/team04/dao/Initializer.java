@@ -69,11 +69,11 @@ public abstract class Initializer {
 
         CandidateDAO candidateDAO = getCandidateDAO();
 
-        Candidate candidate = new Candidate("12345678", "hello@gmail.com", "tester", "tester", new Date(), "AK457841", scientificFieldDAO.findScientificField("4o pedio"));
+        Candidate candidate = new Candidate("12345678", "hello@gmail.com", "tester", "tester", "10/12/2001", "AK457841", scientificFieldDAO.findScientificField("4o pedio"));
         candidateDAO.addCandidate(candidate);
-        candidate = new Candidate("123455554352", "hello3@gmail.com", "tester32", "tester32", new Date(), "AK467841", scientificFieldDAO.findScientificField("4o pedio"));
+        candidate = new Candidate("123455554352", "hello3@gmail.com", "tester32", "tester32", "10/12/2005", "AK467841", scientificFieldDAO.findScientificField("4o pedio"));
         candidateDAO.addCandidate(candidate);
-        candidate = new Candidate("12344144546", "hello2@gmail.com", "tester22", "tester22", new Date(), "AK457541", scientificFieldDAO.findScientificField("4o pedio"));
+        candidate = new Candidate("12344144546", "hello2@gmail.com", "tester22", "tester22", "10/12/2012", "AK457541", scientificFieldDAO.findScientificField("4o pedio"));
         candidateDAO.addCandidate(candidate);
 
 

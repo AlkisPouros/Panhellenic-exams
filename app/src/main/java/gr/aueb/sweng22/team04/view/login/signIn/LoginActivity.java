@@ -64,7 +64,8 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
         String email = edtEmail.getText().toString();
         String password = edtPassword.getText().toString();
         if(viewModel.getPresenter().onLogin(email, password)){
-            //Start new Activity
+            Intent s = new Intent(LoginActivity.this, SignUpActivity.class);
+            startActivity(s);
         }
     }
 

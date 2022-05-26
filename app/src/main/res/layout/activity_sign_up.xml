@@ -6,4 +6,132 @@
     android:layout_height="match_parent"
     tools:context=".view.login.signUp.SignUpActivity">
 
+    <EditText
+        android:id="@+id/RegistrationFirstNameField"
+        android:layout_width="239dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:hint="Enter your first name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/RegistrationLastNameField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegistrationTextMsg" />
+
+    <EditText
+        android:id="@+id/RegistrationLastNameField"
+        android:layout_width="236dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:hint="Enter your last name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/RegistrationPoliceIDField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegistrationFirstNameField" />
+
+    <EditText
+        android:id="@+id/RegistrationDayField"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:hint="Enter your birthday"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/RegistrationScientificField"
+        app:layout_constraintEnd_toEndOf="@+id/RegistrationScientificField"
+        app:layout_constraintStart_toStartOf="@+id/RegistrationPoliceIDField"
+        app:layout_constraintTop_toBottomOf="@+id/RegistrationPoliceIDField" />
+
+    <EditText
+        android:id="@+id/RegistrationEmailField"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/RegistrationPasswordField"
+        app:layout_constraintEnd_toEndOf="@+id/RegistrationScientificField"
+        app:layout_constraintStart_toStartOf="@+id/RegistrationPasswordField"
+        app:layout_constraintTop_toBottomOf="@+id/RegistrationScientificField" />
+
+    <EditText
+        android:id="@+id/RegistrationPasswordField"
+        android:layout_width="232dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/RegistrationFieldMsg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegistrationEmailField" />
+
+    <TextView
+        android:id="@+id/RegistrationTextMsg"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="26dp"
+        android:text="@string/registration_msg"
+        app:layout_constraintBottom_toTopOf="@+id/RegistrationFirstNameField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/RegistrationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegistrationFieldMsg" />
+
+    <EditText
+        android:id="@+id/RegistrationPoliceIDField"
+        android:layout_width="236dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="14dp"
+        android:ems="10"
+        android:hint="Enter your police ID Number"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/RegistrationDayField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegistrationLastNameField" />
+
+    <EditText
+        android:id="@+id/RegistrationScientificField"
+        android:layout_width="235dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="Enter scientific field"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/RegistrationEmailField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegistrationDayField" />
+
+    <TextView
+        android:id="@+id/RegistrationFieldMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/RegistrationButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegistrationPasswordField" />
 </androidx.constraintlayout.widget.ConstraintLayout>
