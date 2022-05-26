@@ -1,6 +1,7 @@
 package gr.aueb.sweng22.team04.dao;
 
 import java.util.List;
+import java.util.ArrayList;
 
 import gr.aueb.sweng22.team04.model.Department;
 

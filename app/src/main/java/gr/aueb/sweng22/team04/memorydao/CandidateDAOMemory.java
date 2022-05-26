@@ -5,6 +5,7 @@ import java.util.List;
 
 import gr.aueb.sweng22.team04.dao.CandidateDAO;
 import gr.aueb.sweng22.team04.model.Candidate;
+import gr.aueb.sweng22.team04.model.Department;
 
 public class CandidateDAOMemory implements CandidateDAO {
     protected static ArrayList<Candidate> candidateEntities = new ArrayList<Candidate>();

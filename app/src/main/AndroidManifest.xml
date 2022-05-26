@@ -11,7 +11,7 @@
         android:theme="@style/Theme.Team04"
         tools:ignore="ExtraText">
         <activity
-            android:name=".SignUpActivity"
+            android:name="gr.aueb.sweng22.team04.view.login.signUp.SignUpActivity"
             android:exported="false" />
         <activity
             android:name="gr.aueb.sweng22.team04.view.login.signIn.LoginActivity"

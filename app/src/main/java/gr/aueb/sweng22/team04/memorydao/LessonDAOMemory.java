@@ -15,6 +15,7 @@ public class LessonDAOMemory implements LessonDAO {
         lessonEntities.add(entity);
     }
 
+    @Override
     public Lesson findLessonByName(String name) {
         for (Lesson now : lessonEntities) {
             if (now.getLessonName() == name) {
