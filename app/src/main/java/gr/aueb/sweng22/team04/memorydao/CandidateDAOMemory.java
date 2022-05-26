@@ -4,9 +4,11 @@ import java.util.ArrayList;
 
 import gr.aueb.sweng22.team04.dao.CandidateDAO;
 import gr.aueb.sweng22.team04.model.Candidate;
+import gr.aueb.sweng22.team04.model.Department;
 
 public class CandidateDAOMemory implements CandidateDAO {
     protected static ArrayList<Candidate> candidateEntities = new ArrayList<Candidate>();
+    public ArrayList<Department> availableDepartmentperUser = new ArrayList<Department>();
 
     @Override
     public void addCandidate(Candidate entity) {
@@ -22,5 +24,10 @@ public class CandidateDAOMemory implements CandidateDAO {
             }
         }
         return null;
+    }
+
+    @Override
+    public ArrayList<Department> getAvailableDeparmtentsperUser() {
+        return availableDepartmentperUser;
     }
 }

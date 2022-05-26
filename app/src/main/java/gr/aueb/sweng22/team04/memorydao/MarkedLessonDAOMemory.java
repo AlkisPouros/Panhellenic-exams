@@ -13,4 +13,9 @@ public class MarkedLessonDAOMemory implements MarkedLessonDAO {
     public void addMarkedLesson(MarkedLesson entity) {
         markedLessonEntities.add(entity);
     }
+
+    @Override
+    public ArrayList<MarkedLesson> getMarkedLessons() {
+        return markedLessonEntities;
+    }
 }

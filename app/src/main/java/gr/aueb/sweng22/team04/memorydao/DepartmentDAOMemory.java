@@ -23,4 +23,9 @@ public class DepartmentDAOMemory implements DepartmentDAO {
         }
         return null;
     }
+
+    @Override
+    public ArrayList<Department> getDepartments() {
+        return departmentEntities;
+    }
 }
