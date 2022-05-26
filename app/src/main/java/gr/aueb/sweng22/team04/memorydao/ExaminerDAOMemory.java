@@ -1,6 +1,7 @@
 package gr.aueb.sweng22.team04.memorydao;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import gr.aueb.sweng22.team04.dao.ExaminerDAO;
 import gr.aueb.sweng22.team04.model.Examiner;
@@ -21,5 +22,17 @@ public class ExaminerDAOMemory implements ExaminerDAO {
             }
         }
         return null;
+    }
+
+    @Override
+    public List<Examiner> findAll() {
+        ArrayList<Examiner> result = new ArrayList<Examiner>();
+        result.addAll(examinerEntities);
+        return result;
+    }
+
+    @Override
+    public void delete(Examiner examiner) {
+        examinerEntities.remove(examiner);
     }
 }

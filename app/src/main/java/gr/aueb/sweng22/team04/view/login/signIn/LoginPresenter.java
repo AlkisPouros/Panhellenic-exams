@@ -8,26 +8,41 @@ public class LoginPresenter {
     private LoginView view;
     private CandidateDAO candidateDAO;
 
-    public LoginPresenter(LoginView view, CandidateDAO candidateDAO){
+    public LoginView getView(){
+        return this.view;
+    }
+
+    public void setView(LoginView view) {
         this.view = view;
+    }
+
+    public void setCandidateDAO(CandidateDAO candidateDAO) {
         this.candidateDAO = candidateDAO;
     }
 
-    void onLogin(String email, String password){
+    public Boolean onLogin(String email, String password){
         if(email.isEmpty() || password.isEmpty()){
             view.EmptyField();
-            return;
+            return false;
         }
 
         if(!email.contains("@")){
             view.showInvalidEmail();
+            return false;
+        }
+
+        if(password.length() < 7){
+            view.showInvalidPassword();
+            return false;
         }
 
         Candidate candidate = candidateDAO.findCandidate(email, password);
 
         if(candidate == null){
-            System.out.println("Here");
             view.showFailedLogin();
+            return false;
+        }else{
+            return true;
         }
     }
 }

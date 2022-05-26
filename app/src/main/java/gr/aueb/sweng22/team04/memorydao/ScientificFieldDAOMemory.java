@@ -1,6 +1,7 @@
 package gr.aueb.sweng22.team04.memorydao;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import gr.aueb.sweng22.team04.dao.ScientificFieldDAO;
 import gr.aueb.sweng22.team04.model.ScientificField;
@@ -20,5 +21,17 @@ public class ScientificFieldDAOMemory implements ScientificFieldDAO {
             }
         }
         return null;
+    }
+
+    @Override
+    public List<ScientificField> findAll() {
+        ArrayList<ScientificField> result = new ArrayList<ScientificField>();
+        result.addAll(scientificFieldEntities);
+        return result;
+    }
+
+    @Override
+    public void delete(ScientificField scientificField){
+        scientificFieldEntities.remove(scientificField);
     }
 }

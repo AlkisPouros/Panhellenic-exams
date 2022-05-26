@@ -13,7 +13,26 @@ import gr.aueb.sweng22.team04.dao.ScientificFieldDAO;
 
 public class MemoryInitializer extends Initializer {
     protected void eraseData() {
-        // to be added
+
+        for(ScientificField scientificField: getScientificFieldDAO().findAll()){
+            getScientificFieldDAO().delete(scientificField);
+        }
+
+        for(Lesson lesson : getLessonDAO().findAll()){
+            getLessonDAO().delete(lesson);
+        }
+
+        for(Examiner examiner : getExaminerDAO().findAll()){
+            getExaminerDAO().delete(examiner);
+        }
+
+        for(Department department : getDepartmentDAO().findAll()){
+            getDepartmentDAO().delete(department);
+        }
+
+        for(Candidate candidate : getCandidateDAO().findAll()){
+            getCandidateDAO().delete(candidate);
+        }
     }
 
 

@@ -1,9 +1,11 @@
 package gr.aueb.sweng22.team04.view.login.signIn;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -15,7 +17,9 @@ import gr.aueb.sweng22.team04.view.login.signUp.SignUpActivity;
 
 
 public class LoginActivity extends AppCompatActivity implements LoginView{
-    LoginPresenter presenter;
+
+    private LoginViewModel viewModel;
+    private LoginPresenter presenter;
     private Button btnLoginButton;
     private Button btnSignUpButton;
     private EditText edtEmail;
@@ -27,10 +31,12 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        viewModel = new ViewModelProvider(this).get(LoginViewModel.class);
+        presenter = viewModel.getPresenter();
+        presenter.setView(this);
+
         Initializer initializer = new MemoryInitializer();
         initializer.prepareData();
-
-        presenter =  new LoginPresenter(this, initializer.getCandidateDAO());
 
         btnLoginButton = (Button) findViewById(R.id.loginInButton);
         btnSignUpButton = (Button) findViewById(R.id.signUpButton);
@@ -38,15 +44,28 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
         edtPassword = (EditText) findViewById(R.id.PasswordLoginField);
         txtLoginMsg = (TextView) findViewById(R.id.LoginPageMsg);
 
-        btnLoginButton.setOnClickListener(v -> signIn());
-        btnSignUpButton.setOnClickListener(v -> signUp());
+        btnLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                signIn();
+            }
+        });
+
+        btnSignUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                signUp();
+            }
+        });
 
     }
 
     private void signIn(){
         String email = edtEmail.getText().toString();
         String password = edtPassword.getText().toString();
-        presenter.onLogin(email, password);
+        if(viewModel.getPresenter().onLogin(email, password)){
+            //Start new Activity
+        }
     }
 
     private void signUp(){

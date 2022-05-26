@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class MixanografikoTest {
-
+/*
     @Test
     public void registerDepartment(){
         ScientificField field = new ScientificField(4,"4o pedio", 4);
@@ -22,4 +22,5 @@ public class MixanografikoTest {
         assertEquals(3, mixanografiko.getRegisteredDepartments().size());
         assertSame(department3, mixanografiko.getRegisteredDepartments().get(1).getDepartment());
     }
+    */
 }

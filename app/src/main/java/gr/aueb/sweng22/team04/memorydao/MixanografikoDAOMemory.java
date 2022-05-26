@@ -1,6 +1,7 @@
 package gr.aueb.sweng22.team04.memorydao;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import gr.aueb.sweng22.team04.dao.MixanografikoDAO;
 import gr.aueb.sweng22.team04.model.Mixanografiko;
@@ -21,5 +22,17 @@ public class MixanografikoDAOMemory implements MixanografikoDAO {
             }
         }
         return null;
+    }
+
+    @Override
+    public List<Mixanografiko> findAll() {
+        ArrayList<Mixanografiko> result = new ArrayList<Mixanografiko>();
+        result.addAll(mixanografikoEntities);
+        return result;
+    }
+
+    @Override
+    public void delete(Mixanografiko mixanografiko) {
+        mixanografikoEntities.remove(mixanografiko);
     }
 }

@@ -8,7 +8,7 @@ import org.junit.Test;
 import java.util.Date;
 
 public class CandidateTest {
-
+/*
     Candidate candidate;
     ScientificField field;
     Examiner examiner;
@@ -80,4 +80,6 @@ public class CandidateTest {
         assertEquals(4, Helper.allDepartments.size());
         assertEquals(3, candidate.getAvailableDepartmentperUser().size());
     }
+
+ */
 }

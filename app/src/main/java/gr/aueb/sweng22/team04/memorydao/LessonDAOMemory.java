@@ -1,6 +1,7 @@
 package gr.aueb.sweng22.team04.memorydao;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import gr.aueb.sweng22.team04.dao.LessonDAO;
 import gr.aueb.sweng22.team04.model.Lesson;
@@ -21,5 +22,17 @@ public class LessonDAOMemory implements LessonDAO {
             }
         }
         return null;
+    }
+
+    @Override
+    public List<Lesson> findAll() {
+        ArrayList<Lesson> result = new ArrayList<Lesson>();
+        result.addAll(lessonEntities);
+        return result;
+    }
+
+    @Override
+    public void delete(Lesson lesson) {
+        lessonEntities.remove(lesson);
     }
 }
