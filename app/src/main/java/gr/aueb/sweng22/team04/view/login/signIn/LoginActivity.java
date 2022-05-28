@@ -13,6 +13,7 @@ import android.widget.TextView;
 import gr.aueb.sweng22.team04.R;
 import gr.aueb.sweng22.team04.dao.Initializer;
 import gr.aueb.sweng22.team04.memorydao.MemoryInitializer;
+import gr.aueb.sweng22.team04.view.candidate.CandidateActivity;
 import gr.aueb.sweng22.team04.view.login.signUp.SignUpActivity;
 
 
@@ -64,7 +65,9 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
         String email = edtEmail.getText().toString();
         String password = edtPassword.getText().toString();
         if(viewModel.getPresenter().onLogin(email, password)){
-            Intent s = new Intent(LoginActivity.this, SignUpActivity.class);
+            Intent s = new Intent(LoginActivity.this, CandidateActivity.class);
+            s.putExtra("email",email);
+            s.putExtra("password",password);
             startActivity(s);
         }
     }

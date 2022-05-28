@@ -8,44 +8,41 @@
 
     <Button
         android:id="@+id/CalculateMarks"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="-150dp"
+        android:layout_marginTop="219dp"
+        android:layout_marginBottom="21dp"
         android:text="Calculate Marks"
-        app:layout_constraintBottom_toTopOf="@+id/FindAvailableDepartments"
+        app:layout_constraintBottom_toTopOf="@+id/CandidateMark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.727" />
-
-    <Button
-        android:id="@+id/FindAvailableDepartments"
-        android:layout_width="405dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="-150dp"
-        android:text="Find Available Departments"
-        app:layout_constraintBottom_toTopOf="@+id/CreateMixanografiko"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.833"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CalculateMarks"
-        app:layout_constraintVertical_bias="0.283" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/CreateMixanografiko"
-        android:layout_width="400dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="-80dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="331dp"
         android:text="Create Mixanografiko"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FindAvailableDepartments"
-        app:layout_constraintVertical_bias="0.486"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/CandidateMark" />
+
+    <TextView
+        android:id="@+id/CandidateMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="203dp"
+        android:layout_marginEnd="204dp"
+        android:layout_marginBottom="45dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/CreateMixanografiko"
+        app:layout_constraintEnd_toEndOf="@+id/CreateMixanografiko"
+        app:layout_constraintStart_toStartOf="@+id/CalculateMarks"
+        app:layout_constraintTop_toBottomOf="@+id/CalculateMarks" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

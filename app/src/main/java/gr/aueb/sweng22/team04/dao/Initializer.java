@@ -71,12 +71,29 @@ public abstract class Initializer {
 
         Candidate candidate = new Candidate("12345678", "hello@gmail.com", "tester", "tester", "10/12/2001", "AK457841", scientificFieldDAO.findScientificField("4o pedio"));
         candidateDAO.addCandidate(candidate);
+        int candidateID = candidate.getId();
         candidate = new Candidate("123455554352", "hello3@gmail.com", "tester32", "tester32", "10/12/2005", "AK467841", scientificFieldDAO.findScientificField("4o pedio"));
         candidateDAO.addCandidate(candidate);
         candidate = new Candidate("12344144546", "hello2@gmail.com", "tester22", "tester22", "10/12/2012", "AK457541", scientificFieldDAO.findScientificField("4o pedio"));
         candidateDAO.addCandidate(candidate);
 
-
+        MarkedLessonDAO markedLessonDAO = getMarkedLessonDAO();
+        Examiner examiner5 = new Examiner("alkis","alkis","12345678","alkis@gmail.com");
+        examiner5.assignAcademicRole(lessonDAO.findLessonByName("Math"));
+        MarkedLesson markedLesson = new MarkedLesson(new Lesson("Math", 1.3, scientificFieldDAO.findScientificField("4o pedio")),19,examiner5,candidateID);
+        markedLessonDAO.addMarkedLesson(markedLesson);
+        examiner5 = new Examiner("alkis","alkis","12345678","alkis@gmail.com");
+        examiner5.assignAcademicRole(lessonDAO.findLessonByName("AOTH"));
+        markedLesson = new MarkedLesson(new Lesson("AOTH", 0.7, scientificFieldDAO.findScientificField("4o pedio")),19.5,examiner5,candidateID);
+        markedLessonDAO.addMarkedLesson(markedLesson);
+        examiner5 = new Examiner("alkis","alkis","12345678","alkis@gmail.com");
+        examiner5.assignAcademicRole(lessonDAO.findLessonByName("AEPP"));
+        markedLesson = new MarkedLesson(new Lesson("AEPP", 0, scientificFieldDAO.findScientificField("4o pedio")),19,examiner5,candidateID);
+        markedLessonDAO.addMarkedLesson(markedLesson);
+        examiner5 = new Examiner("alkis","alkis","12345678","alkis@gmail.com");
+        examiner5.assignAcademicRole(lessonDAO.findLessonByName("Ekthesi"));
+        markedLesson = new MarkedLesson(new Lesson("Ekthesi", 0, scientificFieldDAO.findScientificField("4o pedio")),16,examiner5,candidateID);
+        markedLessonDAO.addMarkedLesson(markedLesson);
     }
 
     public abstract CandidateDAO getCandidateDAO();

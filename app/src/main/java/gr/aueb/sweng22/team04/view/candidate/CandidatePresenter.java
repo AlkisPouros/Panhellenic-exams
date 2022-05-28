@@ -7,8 +7,11 @@ import gr.aueb.sweng22.team04.dao.DepartmentDAO;
 import gr.aueb.sweng22.team04.dao.LessonDAO;
 import gr.aueb.sweng22.team04.dao.MarkedLessonDAO;
 import gr.aueb.sweng22.team04.dao.MixanografikoDAO;
+import gr.aueb.sweng22.team04.memorydao.CandidateDAOMemory;
+import gr.aueb.sweng22.team04.model.Candidate;
 import gr.aueb.sweng22.team04.model.Department;
 import gr.aueb.sweng22.team04.model.MarkedLesson;
+import gr.aueb.sweng22.team04.view.login.signIn.LoginView;
 
 public class CandidatePresenter {
     private CandidateView view;
@@ -17,40 +20,70 @@ public class CandidatePresenter {
     private LessonDAO lessonDAO;
     private DepartmentDAO departmentDAO;
     private MixanografikoDAO mixanografikoDAO;
-    private ArrayList<MarkedLesson> allMarks;
+    private String email;
+    private String password;
 
-    public CandidatePresenter(CandidateView view, CandidateDAO candidateDAO, MarkedLessonDAO markedLessonDAO, LessonDAO lessonDAO, DepartmentDAO departmentDAO, MixanografikoDAO mixanografikoDAO)
-    {
-        this.view = view;
-        this.candidateDAO = candidateDAO;
+    public void setMarkedLessonDAO(MarkedLessonDAO markedLessonDAO) {
         this.markedLessonDAO = markedLessonDAO;
+    }
+
+    public void setLessonDAO(LessonDAO lessonDAO) {
         this.lessonDAO = lessonDAO;
+    }
+
+    public void setDepartmentDAO(DepartmentDAO departmentDAO) {
         this.departmentDAO = departmentDAO;
+    }
+
+    public void setMixanografikoDAO(MixanografikoDAO mixanografikoDAO) {
         this.mixanografikoDAO = mixanografikoDAO;
     }
 
-    void onCalculateMarks()
+    public void setView(CandidateView view) {
+        this.view = view;
+    }
+
+    public void setCandidateDAO(CandidateDAO candidateDAO) {
+        this.candidateDAO = candidateDAO;
+    }
+
+    public void setEmail(String email){this.email = email; }
+
+    public void setPassword(String password){this.password = password; }
+
+    public CandidateDAO getCandidateDAO(){return candidateDAO; }
+
+    public int onCalculateMarks()
     {
         double totalMark = 0;
-        /*
-        for(MarkedLesson markedLesson: this.markedLessonDAO.getMarkedLessons()){
-            totalMark += markedLesson.getMark() * (2 + markedLesson.getLesson().getCoefficient());
-        }
 
-         */
-        totalMark *= 100;
-        this.candidateDAO.findCandidate("email","password").setMoria((int) totalMark);
-    }
-     void onFindAvailableDepartments()
-     {
-         /*
-        for(Department department : this.departmentDAO.getDepartments())
+        Candidate candidate = this.candidateDAO.findCandidate(email,password);
+
+        for(MarkedLesson markedLesson : markedLessonDAO.findAll())
         {
-            if(this.candidateDAO.findCandidate("email","password").getMoria()>= department.getEBE() && this.candidateDAO.findCandidate("email","password").getField().getName().equals(department.getField().getName()))
+            if(markedLesson.getCandidateID()==candidate.getId())
             {
-                this.candidateDAO.getAvailableDeparmtentsperUser().add(department);
+                totalMark += markedLesson.getMark() * (2 + markedLesson.getLesson().getCoefficient());
             }
         }
-          */
+        totalMark *= 100;
+        candidate.setMoria((int) totalMark);
+        return (int)totalMark;
+    }
+
+
+     public void onFindAvailableDepartments()
+     {
+         Candidate candidate = this.candidateDAO.findCandidate(email,password);
+
+        for(Department department : this.departmentDAO.findAll())
+        {
+            if(candidate.getMoria()>= department.getEBE() && candidate.getField().getName().equals(department.getField().getName()))
+            {
+                candidate.getAvailableDepartmentperUser().add(department);
+            }
+        }
+
      }
+
 }

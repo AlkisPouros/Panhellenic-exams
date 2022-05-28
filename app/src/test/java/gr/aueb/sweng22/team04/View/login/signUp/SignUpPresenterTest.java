@@ -1,4 +1,4 @@
-package gr.aueb.sweng22.team04.model.view.login.signUp;
+package gr.aueb.sweng22.team04.View.login.signUp;
 
 import static org.junit.Assert.assertEquals;
 

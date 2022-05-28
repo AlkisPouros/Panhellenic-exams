@@ -1,13 +1,20 @@
-package gr.aueb.sweng22.team04.model.view.login.signUp;
+package gr.aueb.sweng22.team04.View.login.signIn;
 
-import gr.aueb.sweng22.team04.view.login.signUp.SignUpView;
+import gr.aueb.sweng22.team04.view.login.signIn.LoginView;
 
-public class SignUpViewStub implements SignUpView {
+public class LoginViewStub implements LoginView {
 
     private int errorCount;
     private Boolean status = true;
+
     @Override
-    public void emptyField() {
+    public void EmptyField() {
+        errorCount++;
+        status = false;
+    }
+
+    @Override
+    public void showFailedLogin() {
         errorCount++;
         status = false;
     }
@@ -20,12 +27,6 @@ public class SignUpViewStub implements SignUpView {
 
     @Override
     public void showInvalidPassword() {
-        errorCount++;
-        status = false;
-    }
-
-    @Override
-    public void showInvalidPoliceID() {
         errorCount++;
         status = false;
     }

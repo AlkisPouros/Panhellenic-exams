@@ -16,6 +16,7 @@ public class MixanografikoPresenter {
     private DepartmentDAO departmentDAO;
     private CandidateDAO candidateDAO;
     private RegisteredDepartmentDAO registeredDepartmentDAO;
+
     public MixanografikoPresenter(MixanografikoView view, CandidateDAO candidateDAO, MixanografikoDAO mixanografikoDAO, DepartmentDAO departmentDAO, RegisteredDepartmentDAO registeredDepartmentDAO)
     {
         this.view = view;
