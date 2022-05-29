@@ -5,4 +5,8 @@ import gr.aueb.sweng22.team04.view.candidate.CandidateView;
 public class CandidateViewStub implements CandidateView {
 
 
+    @Override
+    public void showCandidateMark() {
+
+    }
 }

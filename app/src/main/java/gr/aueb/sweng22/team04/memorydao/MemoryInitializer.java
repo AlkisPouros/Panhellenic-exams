@@ -1,5 +1,8 @@
 package gr.aueb.sweng22.team04.memorydao;
 
+import java.io.Serializable;
+
+import gr.aueb.sweng22.team04.dao.UserDAO;
 import gr.aueb.sweng22.team04.model.*;
 import gr.aueb.sweng22.team04.dao.CandidateDAO;
 import gr.aueb.sweng22.team04.dao.DepartmentDAO;
@@ -76,4 +79,8 @@ public class MemoryInitializer extends Initializer {
         return new ScientificFieldDAOMemory();
     }
 
+    @Override
+    public UserDAO getUserDAO() {
+        return new UserDAOMemory();
+    }
 }

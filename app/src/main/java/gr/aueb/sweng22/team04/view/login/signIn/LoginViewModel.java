@@ -3,7 +3,11 @@ package gr.aueb.sweng22.team04.view.login.signIn;
 import android.util.Log;
 
 import androidx.lifecycle.ViewModel;
+
+import gr.aueb.sweng22.team04.dao.Initializer;
 import gr.aueb.sweng22.team04.memorydao.CandidateDAOMemory;
+import gr.aueb.sweng22.team04.memorydao.MemoryInitializer;
+import gr.aueb.sweng22.team04.memorydao.UserDAOMemory;
 
 public class LoginViewModel extends ViewModel {
 
@@ -11,7 +15,7 @@ public class LoginViewModel extends ViewModel {
 
     public LoginViewModel(){
         presenter = new LoginPresenter();
-        presenter.setCandidateDAO(new CandidateDAOMemory());
+        presenter.setUserDAO(new UserDAOMemory());
     }
 
     public LoginPresenter getPresenter(){

@@ -2,6 +2,7 @@ package gr.aueb.sweng22.team04.view.candidate;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -47,19 +48,28 @@ public class CandidateActivity extends AppCompatActivity implements CandidateVie
         txtCandidateMark = findViewById(R.id.CandidateMark);
         btnCreateMixanografiko = findViewById(R.id.CreateMixanografiko);
 
-        btnCalculateMarks.setOnClickListener(v->showCandidateMark());
-        btnCreateMixanografiko.setOnClickListener(v->CreateMixanografiko());
+        btnCalculateMarks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showCandidateMark();
+            }
+        });
+        btnCreateMixanografiko.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                createMixanografiko();
+            }
+        });
 
     }
 
     @Override
     public void showCandidateMark()
     {
-
         txtCandidateMark.setText(String.valueOf(candidatePresenter.onCalculateMarks()));
     }
 
-    private void CreateMixanografiko()
+    private void createMixanografiko()
     {
         startActivity(new Intent(CandidateActivity.this, MixanografikoActivity.class));
     }

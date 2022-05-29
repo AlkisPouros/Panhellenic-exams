@@ -1,10 +1,14 @@
 package gr.aueb.sweng22.team04.view.login.signIn;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,12 +17,15 @@ import android.widget.TextView;
 import gr.aueb.sweng22.team04.R;
 import gr.aueb.sweng22.team04.dao.Initializer;
 import gr.aueb.sweng22.team04.memorydao.MemoryInitializer;
+import gr.aueb.sweng22.team04.model.User;
 import gr.aueb.sweng22.team04.view.candidate.CandidateActivity;
+import gr.aueb.sweng22.team04.view.examiner.ExaminerActivity;
 import gr.aueb.sweng22.team04.view.login.signUp.SignUpActivity;
 
 
 public class LoginActivity extends AppCompatActivity implements LoginView{
 
+    private static boolean isFirstRun = true;
     private LoginViewModel viewModel;
     private LoginPresenter presenter;
     private Button btnLoginButton;
@@ -26,6 +33,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
     private EditText edtEmail;
     private EditText edtPassword;
     private TextView txtLoginMsg;
+    private Initializer initializer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +44,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
         presenter = viewModel.getPresenter();
         presenter.setView(this);
 
-        Initializer initializer = new MemoryInitializer();
+        initializer = new MemoryInitializer();
         initializer.prepareData();
 
         btnLoginButton = (Button) findViewById(R.id.loginInButton);
@@ -58,16 +66,21 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
                 signUp();
             }
         });
-
     }
 
     private void signIn(){
         String email = edtEmail.getText().toString();
         String password = edtPassword.getText().toString();
-        if(viewModel.getPresenter().onLogin(email, password)){
+        User user = viewModel.getPresenter().onLogin(email, password);
+        if(user != null && user.getUserMode().equals("Candidate")){
             Intent s = new Intent(LoginActivity.this, CandidateActivity.class);
             s.putExtra("email",email);
             s.putExtra("password",password);
+            startActivity(s);
+        }else if(user != null && user.getUserMode().equals("Examiner")){
+            Intent s = new Intent(LoginActivity.this, ExaminerActivity.class);
+            s.putExtra("email", email);
+            s.putExtra("password", password);
             startActivity(s);
         }
     }

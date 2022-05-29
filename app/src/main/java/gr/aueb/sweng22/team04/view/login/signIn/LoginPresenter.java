@@ -1,12 +1,12 @@
 package gr.aueb.sweng22.team04.view.login.signIn;
 
-import gr.aueb.sweng22.team04.dao.CandidateDAO;
-import gr.aueb.sweng22.team04.model.Candidate;
+import gr.aueb.sweng22.team04.dao.UserDAO;
+import gr.aueb.sweng22.team04.model.User;
 
 public class LoginPresenter {
 
     private LoginView view;
-    private CandidateDAO candidateDAO;
+    private UserDAO userDAO;
 
     public LoginView getView(){
         return this.view;
@@ -16,33 +16,33 @@ public class LoginPresenter {
         this.view = view;
     }
 
-    public void setCandidateDAO(CandidateDAO candidateDAO) {
-        this.candidateDAO = candidateDAO;
+    public void setUserDAO(UserDAO userDAO){
+        this.userDAO = userDAO;
     }
 
-    public Boolean onLogin(String email, String password){
+    public User onLogin(String email, String password){
         if(email.isEmpty() || password.isEmpty()){
             view.EmptyField();
-            return false;
+            return null;
         }
 
         if(!email.contains("@")){
             view.showInvalidEmail();
-            return false;
+            return null;
         }
 
         if(password.length() < 7){
             view.showInvalidPassword();
-            return false;
+            return null;
         }
 
-        Candidate candidate = candidateDAO.findCandidate(email, password);
+        User user = userDAO.findUser(email, password);
 
-        if(candidate == null){
+        if(user == null){
             view.showFailedLogin();
-            return false;
+            return null;
         }else{
-            return true;
+            return user;
         }
     }
 }
