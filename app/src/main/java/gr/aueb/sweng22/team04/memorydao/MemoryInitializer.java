@@ -36,6 +36,10 @@ public class MemoryInitializer extends Initializer {
         for(Candidate candidate : getCandidateDAO().findAll()){
             getCandidateDAO().delete(candidate);
         }
+
+        for(MarkedLesson markedLesson : getMarkedLessonDAO().findAll()){
+            getMarkedLessonDAO().delete(markedLesson);
+        }
     }
 
 

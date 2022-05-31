@@ -32,12 +32,24 @@ public class ExaminerPresenter {
         this.scientificFieldDAO = scientificFieldDAO;
     }
 
+    public ScientificFieldDAO getScientificFieldDAO() {
+        return scientificFieldDAO;
+    }
+
     public void setExaminerDAO(ExaminerDAO examinerDAO){
         this.examinerDAO = examinerDAO;
     }
 
+    public ExaminerDAO getExaminerDAO() {
+        return examinerDAO;
+    }
+
     public void setMarkedLessonDAO(MarkedLessonDAO markedLessonDAO){
         this.markedLessonDAO = markedLessonDAO;
+    }
+
+    public MarkedLessonDAO getMarkedLessonDAO() {
+        return markedLessonDAO;
     }
 
     public Candidate onFindCandidate(String firstName, String lastName){
@@ -61,7 +73,7 @@ public class ExaminerPresenter {
 
     public void onSaveMark(Examiner examiner, Candidate candidate, double mark){
 
-        if(mark <= 0 || mark >= 20){
+        if(mark < 0 || mark > 20){
             view.invalidMark();
         }else{
             MarkedLesson markedLesson = new MarkedLesson(examiner.getAcademicRole(), mark, examiner, candidate.getId());
