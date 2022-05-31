@@ -26,6 +26,16 @@ public class CandidateDAOMemory implements CandidateDAO {
     }
 
     @Override
+    public Candidate findCandidateToMark(String firstName, String lastName) {
+        for(Candidate candidate : candidateEntities){
+            if(candidate.getName().equals(firstName) && candidate.getLastName().equals(lastName)){
+                return candidate;
+            }
+        }
+        return null;
+    }
+
+    @Override
     public List<Candidate> findAll() {
         ArrayList<Candidate> result = new ArrayList<Candidate>();
         result.addAll(candidateEntities);

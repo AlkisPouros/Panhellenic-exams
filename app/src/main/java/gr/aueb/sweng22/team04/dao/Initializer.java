@@ -26,35 +26,35 @@ public abstract class Initializer {
         Lesson lesson = new Lesson("Math", 1.3, scientificFieldDAO.findScientificField("4o pedio"));
         scientificFieldDAO.findScientificField("4o pedio").addLesson(new Lesson("Math", 1.3, scientificFieldDAO.findScientificField("4o pedio")));
         lessonDAO.addLesson(lesson);
-        lesson = new Lesson("Math", 1.3, scientificFieldDAO.findScientificField("4o pedio"));
+        lesson = new Lesson("AOTH", 0.7, scientificFieldDAO.findScientificField("4o pedio"));
         scientificFieldDAO.findScientificField("4o pedio").addLesson(new Lesson("AOTH", 0.7, scientificFieldDAO.findScientificField("4o pedio")));
         lessonDAO.addLesson(lesson);
-        lesson = new Lesson("Math", 1.3, scientificFieldDAO.findScientificField("4o pedio"));
+        lesson = new Lesson("AEPP", 0, scientificFieldDAO.findScientificField("4o pedio"));
         scientificFieldDAO.findScientificField("4o pedio").addLesson(new Lesson("AEPP", 0, scientificFieldDAO.findScientificField("4o pedio")));
         lessonDAO.addLesson(lesson);
-        lesson = new Lesson("Math", 1.3, scientificFieldDAO.findScientificField("4o pedio"));
+        lesson = new Lesson("Ekthesi", 0, scientificFieldDAO.findScientificField("4o pedio"));
         scientificFieldDAO.findScientificField("4o pedio").addLesson(new Lesson("Ekthesi", 0, scientificFieldDAO.findScientificField("4o pedio")));
         lessonDAO.addLesson(lesson);
 
 
         ExaminerDAO examinerDAO = getExaminerDAO(); // assignAcademicRole ?
 
-        Examiner examiner = new Examiner("examiner", "examiner", "1234", "exam@gmail.com");
+        Examiner examiner = new Examiner("examiner", "examiner", "123456789", "exam@gmail.com");
         examiner.assignAcademicRole(lessonDAO.findLessonByName("Math"));
         examinerDAO.addExaminer(examiner);
         userDAO.addUser(examiner);
-        examiner = new Examiner("examiner1", "examiner1", "12342321", "exam1@gmail.com");
-        examiner.assignAcademicRole(lessonDAO.findLessonByName("AOTH"));
-        examinerDAO.addExaminer(examiner);
-        userDAO.addUser(examiner);
-        examiner = new Examiner("examiner2", "examiner2", "12345241", "exam2@gmail.com");
-        examiner.assignAcademicRole(lessonDAO.findLessonByName("AEPP"));
-        examinerDAO.addExaminer(examiner);
-        userDAO.addUser(examiner);
-        examiner = new Examiner("examiner3", "examiner3", "12346743", "exam3@gmail.com");
-        examiner.assignAcademicRole(lessonDAO.findLessonByName("Ekthesi"));
-        examinerDAO.addExaminer(examiner);
-        userDAO.addUser(examiner);
+        Examiner examiner1 = new Examiner("examiner1", "examiner1", "12342321", "exam1@gmail.com");
+        examiner1.assignAcademicRole(lessonDAO.findLessonByName("AOTH"));
+        examinerDAO.addExaminer(examiner1);
+        userDAO.addUser(examiner1);
+        Examiner examiner3 = new Examiner("examiner2", "examiner2", "12345241", "exam2@gmail.com");
+        examiner3.assignAcademicRole(lessonDAO.findLessonByName("AEPP"));
+        examinerDAO.addExaminer(examiner3);
+        userDAO.addUser(examiner3);
+        Examiner examiner4 = new Examiner("examiner3", "examiner3", "12346743", "exam3@gmail.com");
+        examiner4.assignAcademicRole(lessonDAO.findLessonByName("Ekthesi"));
+        examinerDAO.addExaminer(examiner4);
+        userDAO.addUser(examiner4);
 
 
         DepartmentDAO departmentDAO = getDepartmentDAO(); // setEBE ?

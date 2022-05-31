@@ -16,6 +16,11 @@
     <string name="previous">Previous</string>
     <string name="registration_msg">Registration Form</string>
 
+    <string name="enter_message_mark_for_examiner">First search for candidate</string>
+    <string name="search_candidate_exam">Search Candidate</string>
+    <string name="enter_mark_for_candidate">Enter mark for candidate</string>
+    <string name="save_mark">Save mark</string>
+
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

@@ -6,4 +6,107 @@
     android:layout_height="match_parent"
     tools:context=".view.examiner.ExaminerActivity">
 
+    <TextView
+        android:id="@+id/enterMsgForExaminerScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/enter_message_mark_for_examiner"
+        app:layout_constraintStart_toStartOf="@+id/ExaminerEnterFirstName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ExaminerEnterFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Enter candidate's firstname"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterMsgForExaminerScreen" />
+
+    <EditText
+        android:id="@+id/ExaminerEnterLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:hint="Enter candidate's lastname"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/ExaminerEnterFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/ExaminerEnterFirstName" />
+
+    <Button
+        android:id="@+id/examinerSearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="@string/search_candidate_exam"
+        app:layout_constraintEnd_toStartOf="@+id/showFirstNameCandidate"
+        app:layout_constraintStart_toStartOf="@+id/showFirstNameCandidate"
+        app:layout_constraintTop_toBottomOf="@+id/ExaminerEnterLastName" />
+
+    <TextView
+        android:id="@+id/showFirstNameCandidate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toStartOf="@+id/showLastNameCandidate"
+        app:layout_constraintStart_toStartOf="@+id/showLastNameCandidate"
+        app:layout_constraintTop_toBottomOf="@+id/examinerSearchButton" />
+
+    <TextView
+        android:id="@+id/showLastNameCandidate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        app:layout_constraintEnd_toStartOf="@+id/showExaminerLesson"
+        app:layout_constraintStart_toStartOf="@+id/showExaminerLesson"
+        app:layout_constraintTop_toBottomOf="@+id/showFirstNameCandidate" />
+
+    <TextView
+        android:id="@+id/showExaminerLesson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/enterMarkForCandidate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/enterMarkForCandidate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="77dp"
+        android:ems="10"
+        android:hint="@string/enter_mark_for_candidate"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/showExaminerLesson"
+        app:layout_constraintStart_toStartOf="@+id/showExaminerLesson"
+        app:layout_constraintTop_toBottomOf="@+id/showLastNameCandidate" />
+
+    <Button
+        android:id="@+id/saveMarkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/save_mark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterMarkForCandidate" />
+
+    <TextView
+        android:id="@+id/saveMarkStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="@+id/saveMarkButton"
+        app:layout_constraintTop_toBottomOf="@+id/saveMarkButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

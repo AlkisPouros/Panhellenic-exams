@@ -36,13 +36,11 @@ public class CandidateActivity extends AppCompatActivity implements CandidateVie
         initializer.prepareData();
 
         Bundle extras = getIntent().getExtras();
-
         String Candidate_email = extras.getString("email");
         String Candidate_password = extras.getString("password");
 
         candidatePresenter.setEmail(Candidate_email);
         candidatePresenter.setPassword(Candidate_password);
-
 
         btnCalculateMarks = findViewById(R.id.CalculateMarks);
         txtCandidateMark = findViewById(R.id.CandidateMark);
@@ -66,7 +64,7 @@ public class CandidateActivity extends AppCompatActivity implements CandidateVie
     @Override
     public void showCandidateMark()
     {
-        txtCandidateMark.setText(String.valueOf(candidatePresenter.onCalculateMarks()));
+        txtCandidateMark.setText("Τα συνολικά μόρια είναι: " + String.valueOf(candidatePresenter.onCalculateMarks()));
     }
 
     private void createMixanografiko()

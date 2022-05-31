@@ -8,15 +8,18 @@
 
     <Button
         android:id="@+id/CalculateMarks"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="219dp"
-        android:layout_marginBottom="21dp"
+        android:layout_width="355dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="171dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="74dp"
         android:text="Calculate Marks"
         app:layout_constraintBottom_toTopOf="@+id/CandidateMark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/CreateMixanografiko"
@@ -24,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="331dp"
+        android:layout_marginBottom="294dp"
         android:text="Create Mixanografiko"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,13 +38,11 @@
         android:id="@+id/CandidateMark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="203dp"
-        android:layout_marginEnd="204dp"
-        android:layout_marginBottom="45dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginBottom="75dp"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/CreateMixanografiko"
-        app:layout_constraintEnd_toEndOf="@+id/CreateMixanografiko"
-        app:layout_constraintStart_toStartOf="@+id/CalculateMarks"
+        app:layout_constraintStart_toStartOf="@+id/CreateMixanografiko"
         app:layout_constraintTop_toBottomOf="@+id/CalculateMarks" />
 
 
