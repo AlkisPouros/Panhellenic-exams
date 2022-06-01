@@ -6,67 +6,63 @@
     android:layout_height="match_parent"
     tools:context=".view.candidate.CandidateActivity">
 
-    <Button
-        android:id="@+id/CalculateMarks"
-        android:layout_width="322dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="217dp"
-        android:layout_marginBottom="23dp"
-        android:text="Calculate Marks"
-        app:layout_constraintBottom_toTopOf="@+id/CandidateMark"
-        app:layout_constraintEnd_toStartOf="@+id/CandidateMark"
-        app:layout_constraintStart_toStartOf="@+id/CandidateMark"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/CreateMixanografiko"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginBottom="81dp"
-        android:text="Create Mixanografiko"
-        app:layout_constraintBottom_toTopOf="@+id/FindAvailableDepartments"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CandidateMark" />
+        <Button
+            android:id="@+id/CalculateMarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="156dp"
+            android:layout_marginBottom="29dp"
+            android:text="Calculate Marks"
+            app:layout_constraintBottom_toTopOf="@+id/CandidateMark"
+            app:layout_constraintEnd_toStartOf="@+id/CandidateMark"
+            app:layout_constraintStart_toStartOf="@+id/CandidateMark"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/CandidateMark"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/CreateMixanografiko"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CalculateMarks" />
+        <TextView
+            android:id="@+id/CandidateMark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="68dp"
+            android:text=""
+            app:layout_constraintBottom_toTopOf="@+id/CreateMixanografiko"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CalculateMarks" />
 
-    <Button
-        android:id="@+id/FindAvailableDepartments"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="43dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="57dp"
-        android:text="Find Available Departments"
-        app:layout_constraintBottom_toTopOf="@+id/FindDepartment"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CreateMixanografiko" />
+        <Button
+            android:id="@+id/CreateMixanografiko"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="83dp"
+            android:text="Create Mixanografiko"
+            app:layout_constraintBottom_toTopOf="@+id/FindAvailableDepartments"
+            app:layout_constraintEnd_toEndOf="@+id/FindAvailableDepartments"
+            app:layout_constraintStart_toStartOf="@+id/CalculateMarks"
+            app:layout_constraintTop_toBottomOf="@+id/CandidateMark" />
 
-    <Button
-        android:id="@+id/FindDepartment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginBottom="91dp"
-        android:text="Find Department"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FindAvailableDepartments" />
+        <Button
+            android:id="@+id/FindAvailableDepartments"
+            android:layout_width="184dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="83dp"
+            android:text="Find Available Departments"
+            app:layout_constraintBottom_toTopOf="@+id/FindDepartment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CreateMixanografiko" />
 
+        <Button
+            android:id="@+id/FindDepartment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="86dp"
+            android:text="Find Department"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/FindAvailableDepartments"
+            app:layout_constraintStart_toStartOf="@+id/CreateMixanografiko"
+            app:layout_constraintTop_toBottomOf="@+id/FindAvailableDepartments" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

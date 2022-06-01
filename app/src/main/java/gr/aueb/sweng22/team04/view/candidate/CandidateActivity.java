@@ -2,6 +2,7 @@ package gr.aueb.sweng22.team04.view.candidate;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -39,13 +40,11 @@ public class CandidateActivity extends AppCompatActivity implements CandidateVie
         initializer.prepareData();
 
         Bundle extras = getIntent().getExtras();
-
         String Candidate_email = extras.getString("email");
         String Candidate_password = extras.getString("password");
 
         candidatePresenter.setEmail(Candidate_email);
         candidatePresenter.setPassword(Candidate_password);
-
 
 
 
@@ -57,8 +56,18 @@ public class CandidateActivity extends AppCompatActivity implements CandidateVie
 
 
 
-        btnCalculateMarks.setOnClickListener(v->showCandidateMark());
-        btnCreateMixanografiko.setOnClickListener(v->CreateMixanografiko());
+        btnCalculateMarks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showCandidateMark();
+            }
+        });
+        btnCreateMixanografiko.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                createMixanografiko();
+            }
+        });
 
         btnFindDepartment.setOnClickListener(v->FindDepartment());
         btnFindAvailableDepartments.setOnClickListener(v->FindAvailableDepartments());
@@ -67,10 +76,12 @@ public class CandidateActivity extends AppCompatActivity implements CandidateVie
     @Override
     public void showCandidateMark()
     {
-        txtCandidateMark.setText(String.valueOf(candidatePresenter.onCalculateMarks()));
+
+        txtCandidateMark.setText("Τα συνολικά μόρια είναι: " + String.valueOf(candidatePresenter.onCalculateMarks()));
+
     }
 
-    private void CreateMixanografiko()
+    private void createMixanografiko()
     {
         startActivity(new Intent(CandidateActivity.this, MixanografikoActivity.class));
     }

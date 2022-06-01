@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel;
 
 import gr.aueb.sweng22.team04.memorydao.CandidateDAOMemory;
 import gr.aueb.sweng22.team04.memorydao.ScientificFieldDAOMemory;
+import gr.aueb.sweng22.team04.memorydao.UserDAOMemory;
 
 public class SignUpViewModel extends ViewModel {
 
@@ -15,6 +16,7 @@ public class SignUpViewModel extends ViewModel {
         presenter = new SignUpPresenter();
         presenter.setCandidateDAO(new CandidateDAOMemory());
         presenter.setScientificFieldDAO(new ScientificFieldDAOMemory());
+        presenter.setUserDAO(new UserDAOMemory());
     }
 
     public SignUpPresenter getPresenter(){

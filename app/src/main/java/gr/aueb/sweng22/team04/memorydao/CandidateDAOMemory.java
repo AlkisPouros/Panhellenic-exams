@@ -17,9 +17,18 @@ public class CandidateDAOMemory implements CandidateDAO {
 
     @Override
     public Candidate findCandidate(String email, String password) {
-        System.out.println(candidateEntities.size());
         for (Candidate candidate : candidateEntities){
             if (candidate.getEmail().equals(email) && candidate.getPassword().equals(password)) {
+                return candidate;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public Candidate findCandidateToMark(String firstName, String lastName) {
+        for(Candidate candidate : candidateEntities){
+            if(candidate.getName().equals(firstName) && candidate.getLastName().equals(lastName)){
                 return candidate;
             }
         }

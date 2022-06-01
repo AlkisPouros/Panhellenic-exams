@@ -61,12 +61,15 @@ public class MixanografikoPresenterTest {
     @Test
     public void onRegisterDepartments()
     {
+
         presenter.setEmail("hello@gmail.com");
         presenter.setPassword("12345678");
         candidatePresenter.setEmail("hello@gmail.com");
         candidatePresenter.setPassword("12345678");
         departmentPresenter.setEmail("hello@gmail.com");
         departmentPresenter.setPassword("12345678");
+
+
         candidatePresenter.onCalculateMarks();
         departmentPresenter.onFindAvailableDepartments();
         presenter.onRegisterDepartments();

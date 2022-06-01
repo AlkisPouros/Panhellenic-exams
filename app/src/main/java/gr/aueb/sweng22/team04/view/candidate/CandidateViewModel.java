@@ -5,8 +5,10 @@ import android.util.Log;
 import androidx.lifecycle.ViewModel;
 
 import gr.aueb.sweng22.team04.dao.CandidateDAO;
+import gr.aueb.sweng22.team04.dao.Initializer;
 import gr.aueb.sweng22.team04.memorydao.CandidateDAOMemory;
 import gr.aueb.sweng22.team04.memorydao.MarkedLessonDAOMemory;
+import gr.aueb.sweng22.team04.memorydao.MemoryInitializer;
 
 public class CandidateViewModel extends ViewModel {
 
@@ -17,7 +19,6 @@ public class CandidateViewModel extends ViewModel {
         presenter = new CandidatePresenter();
         presenter.setCandidateDAO(new CandidateDAOMemory());
         presenter.setMarkedLessonDAO(new MarkedLessonDAOMemory());
-
     }
 
     public CandidatePresenter getPresenter() {

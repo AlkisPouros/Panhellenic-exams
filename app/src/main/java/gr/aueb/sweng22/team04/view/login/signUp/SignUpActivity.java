@@ -39,8 +39,6 @@ public class SignUpActivity extends AppCompatActivity implements SignUpView {
         presenter = viewModel.getPresenter();
         presenter.setView(this);
 
-        Initializer initializer = new MemoryInitializer();
-        initializer.prepareData();
 
         btnRegisterButton = (Button) findViewById(R.id.RegistrationButton);
         edtFirstName = (EditText) findViewById(R.id.RegistrationFirstNameField);
@@ -78,7 +76,7 @@ public class SignUpActivity extends AppCompatActivity implements SignUpView {
 
     @Override
     public void emptyField() {
-        txtRegistrationMsg.setText("Please feel all the fields");
+        txtRegistrationMsg.setText("Please fill all the fields");
     }
 
     @Override

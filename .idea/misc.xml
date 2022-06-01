@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/layout/activity_candidate.xml" value="0.3723958333333333" />
         <entry key="app/src/main/res/layout/activity_create_mixanografiko.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/activity_examiner.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17299898682877407" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.3723958333333333" />

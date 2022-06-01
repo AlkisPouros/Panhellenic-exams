@@ -1,6 +1,7 @@
 package gr.aueb.sweng22.team04.View.login.signUp;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -9,6 +10,7 @@ import gr.aueb.sweng22.team04.dao.Initializer;
 import gr.aueb.sweng22.team04.memorydao.CandidateDAOMemory;
 import gr.aueb.sweng22.team04.memorydao.MemoryInitializer;
 import gr.aueb.sweng22.team04.memorydao.ScientificFieldDAOMemory;
+import gr.aueb.sweng22.team04.memorydao.UserDAOMemory;
 import gr.aueb.sweng22.team04.view.login.signUp.SignUpPresenter;
 
 public class SignUpPresenterTest {
@@ -26,6 +28,7 @@ public class SignUpPresenterTest {
         presenter.setView(viewStub);
         presenter.setCandidateDAO(new CandidateDAOMemory());
         presenter.setScientificFieldDAO(new ScientificFieldDAOMemory());
+        presenter.setUserDAO(new UserDAOMemory());
     }
 
     @Test
@@ -62,5 +65,9 @@ public class SignUpPresenterTest {
         presenter.onSignUp("test", "test", "AK35663", "10/12/2005", "hello@gmail.com", "123456789", "4o pedio");
         assertEquals(0, viewStub.getErrorCount());
         assertEquals(true, viewStub.getStatus());
+        assertEquals(4, presenter.getCandidateDAO().findAll().size());
+        assertNotEquals(3, presenter.getCandidateDAO().findAll().size());
+        assertNotEquals(5, presenter.getCandidateDAO().findAll().size());
+        assertEquals(8, presenter.getUserDAO().findAll().size());
     }
 }

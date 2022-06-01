@@ -11,6 +11,8 @@ public interface CandidateDAO {
 
     Candidate findCandidate(String email, String password);
 
+    Candidate findCandidateToMark(String firstName, String lastName);
+
     List<Candidate> findAll();
 
     void delete(Candidate candidate);

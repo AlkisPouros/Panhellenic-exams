@@ -56,7 +56,6 @@ public class CandidatePresenter {
     public int onCalculateMarks()
     {
         double totalMark = 0;
-
         Candidate candidate = this.candidateDAO.findCandidate(email,password);
 
         for(MarkedLesson markedLesson : markedLessonDAO.findAll())
@@ -70,7 +69,6 @@ public class CandidatePresenter {
         candidate.setMoria((int) totalMark);
         return (int)totalMark;
     }
-
 
 
 

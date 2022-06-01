@@ -8,6 +8,7 @@ import org.junit.Test;
 import gr.aueb.sweng22.team04.dao.Initializer;
 import gr.aueb.sweng22.team04.memorydao.CandidateDAOMemory;
 import gr.aueb.sweng22.team04.memorydao.MemoryInitializer;
+import gr.aueb.sweng22.team04.memorydao.UserDAOMemory;
 import gr.aueb.sweng22.team04.view.login.signIn.LoginPresenter;
 
 
@@ -24,7 +25,7 @@ public class LoginPresenterTest {
         viewStub = new LoginViewStub();
         presenter = new LoginPresenter();
         presenter.setView(viewStub);
-        presenter.setCandidateDAO(new CandidateDAOMemory());
+        presenter.setUserDAO(new UserDAOMemory());
     }
 
     @Test
