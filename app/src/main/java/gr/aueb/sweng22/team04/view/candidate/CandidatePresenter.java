@@ -72,18 +72,6 @@ public class CandidatePresenter {
     }
 
 
-     public void onFindAvailableDepartments()
-     {
-         Candidate candidate = this.candidateDAO.findCandidate(email,password);
 
-        for(Department department : this.departmentDAO.findAll())
-        {
-            if(candidate.getMoria()>= department.getEBE() && candidate.getField().getName().equals(department.getField().getName()))
-            {
-                candidate.getAvailableDepartmentperUser().add(department);
-            }
-        }
-
-     }
 
 }

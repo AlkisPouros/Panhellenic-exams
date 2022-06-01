@@ -15,9 +15,9 @@ public class MixanografikoDAOMemory implements MixanografikoDAO {
     }
 
     @Override
-    public Mixanografiko findMixanografiko(int ID) {
+    public Mixanografiko findMixanografiko(String IDNumber) {
         for (Mixanografiko mixanografiko : mixanografikoEntities) {
-            if (mixanografiko.getMixanografikoID() == ID) {
+            if (mixanografiko.getCandidateIDNumber().equals(IDNumber)) {
                 return mixanografiko;
             }
         }

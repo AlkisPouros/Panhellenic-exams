@@ -9,11 +9,16 @@ public class Mixanografiko {
     private int mixanografikoID;
     private Date registrationDate;
     private ArrayList<RegisteredDepartment> registeredDepartments = new ArrayList<RegisteredDepartment>();
+    private String CandidateIDNumber;
 
-    public Mixanografiko(){
+    public Mixanografiko(String CandidateIDNumber){
         Random rand = new Random();
         this.mixanografikoID = rand.nextInt();
         this.registrationDate = new Date();
+        this.CandidateIDNumber = CandidateIDNumber;
+    }
+    public String getCandidateIDNumber(){
+        return this.CandidateIDNumber;
     }
 
     public int getMixanografikoID() {

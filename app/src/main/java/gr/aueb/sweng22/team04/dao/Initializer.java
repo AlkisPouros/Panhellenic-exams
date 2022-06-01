@@ -72,6 +72,7 @@ public abstract class Initializer {
         Candidate candidate = new Candidate("12345678", "hello@gmail.com", "tester", "tester", "10/12/2001", "AK457841", scientificFieldDAO.findScientificField("4o pedio"));
         candidateDAO.addCandidate(candidate);
         int candidateID = candidate.getId();
+        String candidateIDNumber = candidate.getIdNumber();
         candidate = new Candidate("123455554352", "hello3@gmail.com", "tester32", "tester32", "10/12/2005", "AK467841", scientificFieldDAO.findScientificField("4o pedio"));
         candidateDAO.addCandidate(candidate);
         candidate = new Candidate("12344144546", "hello2@gmail.com", "tester22", "tester22", "10/12/2012", "AK457541", scientificFieldDAO.findScientificField("4o pedio"));
@@ -94,6 +95,20 @@ public abstract class Initializer {
         examiner5.assignAcademicRole(lessonDAO.findLessonByName("Ekthesi"));
         markedLesson = new MarkedLesson(new Lesson("Ekthesi", 0, scientificFieldDAO.findScientificField("4o pedio")),16,examiner5,candidateID);
         markedLessonDAO.addMarkedLesson(markedLesson);
+
+        MixanografikoDAO mixanografikoDAO = getMixanografikoDAO();
+
+        Mixanografiko mixanografiko = new Mixanografiko(candidateIDNumber);
+        mixanografikoDAO.addMixanografiko(mixanografiko);
+
+        RegisteredDepartmentDAO registrationDAO = getRegisteredDepartmentDAO();
+
+        RegisteredDepartment registeredDepartment = new RegisteredDepartment(0,new Department("OPA", 333, 120, scientificFieldDAO.findScientificField("4o pedio")));
+        registrationDAO.addRegisteredDepartment(registeredDepartment);
+        registeredDepartment = new RegisteredDepartment(1,new Department("PAPEI", 457, 150, scientificFieldDAO.findScientificField("4o pedio")));
+        registrationDAO.addRegisteredDepartment(registeredDepartment);
+        registeredDepartment = new RegisteredDepartment(2,new Department("EKPA", 125, 180, scientificFieldDAO.findScientificField("4o pedio")));
+        registrationDAO.addRegisteredDepartment(registeredDepartment);
     }
 
     public abstract CandidateDAO getCandidateDAO();

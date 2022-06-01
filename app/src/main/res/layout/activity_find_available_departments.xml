@@ -6,29 +6,27 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/RegisterDepartments"
-        android:layout_width="173dp"
+        android:id="@+id/FindAvailableDepartments"
+        android:layout_width="193dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="522dp"
-        android:text="Register Departments"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="585dp"
+        android:text="Find Available Departments"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.067"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtRegisterDepartments" />
+        app:layout_constraintTop_toBottomOf="@+id/ShowAvailableDepartments" />
 
     <TextView
-        android:id="@+id/txtRegisterDepartments"
+        android:id="@+id/ShowAvailableDepartments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="112dp"
-        android:layout_marginBottom="24dp"
-        android:text="Register Departments"
-        app:layout_constraintBottom_toTopOf="@+id/RegisterDepartments"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginBottom="6dp"
+        android:text="Show Available Departments"
+        app:layout_constraintBottom_toTopOf="@+id/FindAvailableDepartments"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/RegisterDepartments"
+        app:layout_constraintStart_toStartOf="@+id/FindAvailableDepartments"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

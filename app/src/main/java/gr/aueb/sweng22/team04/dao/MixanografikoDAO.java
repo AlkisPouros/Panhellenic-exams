@@ -7,7 +7,7 @@ import gr.aueb.sweng22.team04.model.Mixanografiko;
 public interface MixanografikoDAO {
     void addMixanografiko(Mixanografiko entity);
 
-    Mixanografiko findMixanografiko(int ID);
+    Mixanografiko findMixanografiko(String IDNumber);
 
     List<Mixanografiko> findAll();
 

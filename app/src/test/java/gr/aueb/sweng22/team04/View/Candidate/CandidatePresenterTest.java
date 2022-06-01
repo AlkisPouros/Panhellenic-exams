@@ -26,6 +26,7 @@ public class CandidatePresenterTest {
 
         viewStub = new CandidateViewStub();
         presenter = new CandidatePresenter();
+
         presenter.setView(viewStub);
         presenter.setMarkedLessonDAO(new MarkedLessonDAOMemory());
         presenter.setDepartmentDAO(new DepartmentDAOMemory());
@@ -35,25 +36,14 @@ public class CandidatePresenterTest {
     @Test
     public void onCalculateMarks()
     {
+        int moria;
         presenter.setEmail("hello@gmail.com");
         presenter.setPassword("12345678");
         Candidate candidate = presenter.getCandidateDAO().findCandidate("hello@gmail.com","12345678");
-        presenter.onCalculateMarks();
+        moria = presenter.onCalculateMarks();
         assertNotEquals(-1,candidate.getMoria());
         assertEquals(18535,candidate.getMoria());
-
-    }
-    @Test
-    public void onFindAvailableDepartments()
-    {
-        presenter.setEmail("hello@gmail.com");
-        presenter.setPassword("12345678");
-        Candidate candidate = presenter.getCandidateDAO().findCandidate("hello@gmail.com","12345678");
-        presenter.onCalculateMarks();
-        presenter.onFindAvailableDepartments();
-        assertNotEquals(0,candidate.getAvailableDepartmentperUser().size());
-        assertEquals(3,candidate.getAvailableDepartmentperUser().size());
-
+        assertEquals(moria,candidate.getMoria());
     }
 
 

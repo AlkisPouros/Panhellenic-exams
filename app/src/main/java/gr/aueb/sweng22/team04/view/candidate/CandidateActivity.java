@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import gr.aueb.sweng22.team04.R;
+import gr.aueb.sweng22.team04.view.FindAvailableDepartment.FindAvailableDepartmentsActivity;
+import gr.aueb.sweng22.team04.view.FindDepartment.FindDepartmentActivity;
 import gr.aueb.sweng22.team04.view.mixanografiko.MixanografikoActivity;
 import gr.aueb.sweng22.team04.dao.Initializer;
 import gr.aueb.sweng22.team04.memorydao.MemoryInitializer;
@@ -19,6 +21,8 @@ public class CandidateActivity extends AppCompatActivity implements CandidateVie
     CandidatePresenter candidatePresenter;
     private Button btnCalculateMarks;
     private Button btnCreateMixanografiko;
+    private Button btnFindDepartment;
+    private Button btnFindAvailableDepartments;
     private TextView txtCandidateMark;
 
 
@@ -43,25 +47,40 @@ public class CandidateActivity extends AppCompatActivity implements CandidateVie
         candidatePresenter.setPassword(Candidate_password);
 
 
+
+
         btnCalculateMarks = findViewById(R.id.CalculateMarks);
         txtCandidateMark = findViewById(R.id.CandidateMark);
         btnCreateMixanografiko = findViewById(R.id.CreateMixanografiko);
+        btnFindDepartment = findViewById(R.id.FindDepartment);
+        btnFindAvailableDepartments = findViewById(R.id.FindAvailableDepartments);
+
+
 
         btnCalculateMarks.setOnClickListener(v->showCandidateMark());
         btnCreateMixanografiko.setOnClickListener(v->CreateMixanografiko());
 
+        btnFindDepartment.setOnClickListener(v->FindDepartment());
+        btnFindAvailableDepartments.setOnClickListener(v->FindAvailableDepartments());
     }
 
     @Override
     public void showCandidateMark()
     {
-
         txtCandidateMark.setText(String.valueOf(candidatePresenter.onCalculateMarks()));
     }
 
     private void CreateMixanografiko()
     {
         startActivity(new Intent(CandidateActivity.this, MixanografikoActivity.class));
+    }
+    private void FindDepartment()
+    {
+        startActivity(new Intent(CandidateActivity.this, FindDepartmentActivity.class));
+    }
+    private void FindAvailableDepartments()
+    {
+        startActivity(new Intent(CandidateActivity.this, FindAvailableDepartmentsActivity.class));
     }
 
 
