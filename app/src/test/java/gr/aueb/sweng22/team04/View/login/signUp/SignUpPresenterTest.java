@@ -62,7 +62,7 @@ public class SignUpPresenterTest {
 
     @Test
     public void successRegistration(){
-        presenter.onSignUp("test", "test", "AK35663", "10/12/2005", "hello@gmail.com", "123456789", "4o pedio");
+        presenter.onSignUp("test", "test", "AK35663", "10/12/2005", "hello56@gmail.com", "123456789", "4o pedio");
         assertEquals(0, viewStub.getErrorCount());
         assertEquals(true, viewStub.getStatus());
         assertEquals(4, presenter.getCandidateDAO().findAll().size());
