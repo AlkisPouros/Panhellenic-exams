@@ -1,8 +1,7 @@
-package gr.aueb.sweng22.team04.view.FindAvailableDepartment;
+package gr.aueb.sweng22.team04.view.FindAvailableDepartments;
 
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -16,8 +15,8 @@ import gr.aueb.sweng22.team04.memorydao.MemoryInitializer;
 
 public class FindAvailableDepartmentsActivity extends AppCompatActivity implements FindAvailableDepartmentsView {
 
-    FindAvailableDepartmentPresenter presenter;
-    FindAvailableDepartmentViewModel viewmodel;
+    FindAvailableDepartmentsPresenter presenter;
+    FindAvailableDepartmentsViewModel viewmodel;
     private Button btnFindAvailDepartments;
     private TextView txtFindDeps;
     private ListView ListAvailableDepartments;
@@ -28,7 +27,7 @@ public class FindAvailableDepartmentsActivity extends AppCompatActivity implemen
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_available_departments);
-        viewmodel = new ViewModelProvider(this).get(FindAvailableDepartmentViewModel.class);
+        viewmodel = new ViewModelProvider(this).get(FindAvailableDepartmentsViewModel.class);
         presenter = viewmodel.getPresenter();
         presenter.setView(this);
 

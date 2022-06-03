@@ -1,11 +1,11 @@
-package gr.aueb.sweng22.team04.view.FindAvailableDepartment;
+package gr.aueb.sweng22.team04.view.FindAvailableDepartments;
 
 import gr.aueb.sweng22.team04.dao.CandidateDAO;
 import gr.aueb.sweng22.team04.dao.DepartmentDAO;
 import gr.aueb.sweng22.team04.model.Candidate;
 import gr.aueb.sweng22.team04.model.Department;
 
-public class FindAvailableDepartmentPresenter {
+public class FindAvailableDepartmentsPresenter {
 
     private FindAvailableDepartmentsView view;
     private CandidateDAO candidateDAO;

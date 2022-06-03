@@ -10,9 +10,7 @@ import gr.aueb.sweng22.team04.memorydao.MarkedLessonDAOMemory;
 import gr.aueb.sweng22.team04.memorydao.MemoryInitializer;
 import gr.aueb.sweng22.team04.memorydao.MixanografikoDAOMemory;
 import gr.aueb.sweng22.team04.memorydao.RegisteredDepartmentDAOMemory;
-import gr.aueb.sweng22.team04.model.Candidate;
-import gr.aueb.sweng22.team04.model.Department;
-import gr.aueb.sweng22.team04.view.FindAvailableDepartment.FindAvailableDepartmentPresenter;
+import gr.aueb.sweng22.team04.view.FindAvailableDepartments.FindAvailableDepartmentsPresenter;
 import gr.aueb.sweng22.team04.view.candidate.CandidatePresenter;
 import gr.aueb.sweng22.team04.view.mixanografiko.MixanografikoPresenter;
 
@@ -26,7 +24,7 @@ public class MixanografikoPresenterTest {
     MixanografikoViewStub viewstub;
     CandidatePresenter candidatePresenter;
     CandidateViewStub viewstub1;
-    FindAvailableDepartmentPresenter departmentPresenter;
+    FindAvailableDepartmentsPresenter departmentPresenter;
     FindAvailableDepartmentsViewStub ViewStub;
 
     @Before
@@ -41,7 +39,7 @@ public class MixanografikoPresenterTest {
 
         presenter = new MixanografikoPresenter();
         candidatePresenter = new CandidatePresenter();
-        departmentPresenter = new FindAvailableDepartmentPresenter();
+        departmentPresenter = new FindAvailableDepartmentsPresenter();
         presenter.setView(viewstub);
         candidatePresenter.setView(viewstub1);
         departmentPresenter.setView(ViewStub);
