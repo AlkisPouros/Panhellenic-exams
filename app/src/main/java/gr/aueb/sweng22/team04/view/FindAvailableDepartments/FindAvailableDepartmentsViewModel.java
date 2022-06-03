@@ -1,4 +1,4 @@
-package gr.aueb.sweng22.team04.view.FindAvailableDepartment;
+package gr.aueb.sweng22.team04.view.FindAvailableDepartments;
 
 import android.util.Log;
 
@@ -7,18 +7,18 @@ import androidx.lifecycle.ViewModel;
 import gr.aueb.sweng22.team04.memorydao.CandidateDAOMemory;
 import gr.aueb.sweng22.team04.memorydao.DepartmentDAOMemory;
 
-public class FindAvailableDepartmentViewModel extends ViewModel {
+public class FindAvailableDepartmentsViewModel extends ViewModel {
 
-    FindAvailableDepartmentPresenter presenter;
+    FindAvailableDepartmentsPresenter presenter;
 
-    public FindAvailableDepartmentViewModel()
+    public FindAvailableDepartmentsViewModel()
     {
-        presenter = new FindAvailableDepartmentPresenter();
+        presenter = new FindAvailableDepartmentsPresenter();
         presenter.setCandidateDAO(new CandidateDAOMemory());
         presenter.setDepartmentDAO(new DepartmentDAOMemory());
 
     }
-    public FindAvailableDepartmentPresenter getPresenter()
+    public FindAvailableDepartmentsPresenter getPresenter()
     {
         return presenter;
     }

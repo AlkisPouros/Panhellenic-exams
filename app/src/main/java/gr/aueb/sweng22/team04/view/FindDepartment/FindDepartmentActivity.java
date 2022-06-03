@@ -12,7 +12,6 @@ import androidx.lifecycle.ViewModelProvider;
 import gr.aueb.sweng22.team04.R;
 import gr.aueb.sweng22.team04.dao.Initializer;
 import gr.aueb.sweng22.team04.memorydao.MemoryInitializer;
-import gr.aueb.sweng22.team04.view.FindAvailableDepartment.FindAvailableDepartmentViewModel;
 import gr.aueb.sweng22.team04.view.candidate.CandidatePresenter;
 
 public class FindDepartmentActivity extends AppCompatActivity implements FindDepartmentView{

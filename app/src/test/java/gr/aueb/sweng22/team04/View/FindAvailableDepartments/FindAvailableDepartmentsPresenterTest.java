@@ -7,18 +7,17 @@ import org.junit.Before;
 import org.junit.Test;
 
 import gr.aueb.sweng22.team04.View.Candidate.CandidateViewStub;
-import gr.aueb.sweng22.team04.View.FindDepartments.FindDepartmentViewStub;
 import gr.aueb.sweng22.team04.dao.Initializer;
 import gr.aueb.sweng22.team04.memorydao.CandidateDAOMemory;
 import gr.aueb.sweng22.team04.memorydao.DepartmentDAOMemory;
 import gr.aueb.sweng22.team04.memorydao.MarkedLessonDAOMemory;
 import gr.aueb.sweng22.team04.memorydao.MemoryInitializer;
-import gr.aueb.sweng22.team04.view.FindAvailableDepartment.FindAvailableDepartmentPresenter;
+import gr.aueb.sweng22.team04.view.FindAvailableDepartments.FindAvailableDepartmentsPresenter;
 import gr.aueb.sweng22.team04.view.candidate.CandidatePresenter;
 
 public class FindAvailableDepartmentsPresenterTest {
 
-    FindAvailableDepartmentPresenter presenter;
+    FindAvailableDepartmentsPresenter presenter;
     FindAvailableDepartmentsViewStub viewStub;
     CandidatePresenter candidatePresenter;
     CandidateViewStub ViewStub;
@@ -31,7 +30,7 @@ public class FindAvailableDepartmentsPresenterTest {
         initializer.prepareData();
 
         viewStub = new FindAvailableDepartmentsViewStub();
-        presenter = new FindAvailableDepartmentPresenter();
+        presenter = new FindAvailableDepartmentsPresenter();
         presenter.setView(viewStub);
 
         ViewStub = new CandidateViewStub();

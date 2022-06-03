@@ -21,7 +21,7 @@ public abstract class Initializer {
         scientificFieldDAO.addScientificField(new ScientificField("4o pedio", 4));
         
         
-        LessonDAO lessonDAO = getLessonDAO();  // Χρησιμοποιούμε την addLesson στο DAO, μάλλον δεν πρέπει
+        LessonDAO lessonDAO = getLessonDAO();
 
         Lesson lesson = new Lesson("Math", 1.3, scientificFieldDAO.findScientificField("4o pedio"));
         scientificFieldDAO.findScientificField("4o pedio").addLesson(new Lesson("Math", 1.3, scientificFieldDAO.findScientificField("4o pedio")));
@@ -37,7 +37,7 @@ public abstract class Initializer {
         lessonDAO.addLesson(lesson);
 
 
-        ExaminerDAO examinerDAO = getExaminerDAO(); // assignAcademicRole ?
+        ExaminerDAO examinerDAO = getExaminerDAO();
 
         Examiner examiner = new Examiner("examiner", "examiner", "123456789", "exam@gmail.com");
         examiner.assignAcademicRole(lessonDAO.findLessonByName("Math"));
@@ -57,7 +57,7 @@ public abstract class Initializer {
         userDAO.addUser(examiner4);
 
 
-        DepartmentDAO departmentDAO = getDepartmentDAO(); // setEBE ?
+        DepartmentDAO departmentDAO = getDepartmentDAO();
 
         Department department = new Department("OPA", 333, 120, scientificFieldDAO.findScientificField("4o pedio"));
         department.setEBE(15000);

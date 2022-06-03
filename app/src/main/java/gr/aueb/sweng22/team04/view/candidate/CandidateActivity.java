@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import gr.aueb.sweng22.team04.R;
-import gr.aueb.sweng22.team04.view.FindAvailableDepartment.FindAvailableDepartmentsActivity;
+import gr.aueb.sweng22.team04.view.FindAvailableDepartments.FindAvailableDepartmentsActivity;
 import gr.aueb.sweng22.team04.view.FindDepartment.FindDepartmentActivity;
 import gr.aueb.sweng22.team04.view.mixanografiko.MixanografikoActivity;
 import gr.aueb.sweng22.team04.dao.Initializer;
