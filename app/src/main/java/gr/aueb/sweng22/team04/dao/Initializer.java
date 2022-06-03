@@ -82,7 +82,6 @@ public abstract class Initializer {
         String candidateIDNumber = candidate.getIdNumber();
 
         userDAO.addUser(candidate);
-
         candidate = new Candidate("123455554352", "hello3@gmail.com", "tester32", "tester32", "10/12/2005", "AK467841", scientificFieldDAO.findScientificField("4o pedio"));
         candidateDAO.addCandidate(candidate);
         userDAO.addUser(candidate);

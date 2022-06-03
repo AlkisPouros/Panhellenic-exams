@@ -1,5 +1,7 @@
 package gr.aueb.sweng22.team04.view.mixanografiko;
 
+import java.util.ArrayList;
+
 import gr.aueb.sweng22.team04.dao.CandidateDAO;
 import gr.aueb.sweng22.team04.dao.DepartmentDAO;
 import gr.aueb.sweng22.team04.dao.MixanografikoDAO;
@@ -59,12 +61,13 @@ public class MixanografikoPresenter {
     }
 
 
-    public void onRegisterDepartments()
+    public ArrayList<RegisteredDepartment> onRegisterDepartments()
     {
 
         Candidate candidate = this.candidateDAO.findCandidate(email,password); //see CandidatePresenter to be checked again
 
         int counter = 0;
+
 
 
         for(Department department : candidate.getAvailableDepartmentperUser())
@@ -75,7 +78,10 @@ public class MixanografikoPresenter {
             this.registeredDepartmentDAO.addRegisteredDepartment(registeredDepartment); // Adding these new submitted departments to the memory
 
         }
-
+        if(this.mixanografikoDAO.findMixanografiko(candidate.getIdNumber()).getRegisteredDepartments().size()<0)
+            return null;
+        else
+            return this.mixanografikoDAO.findMixanografiko(candidate.getIdNumber()).getRegisteredDepartments();
     }
 
 

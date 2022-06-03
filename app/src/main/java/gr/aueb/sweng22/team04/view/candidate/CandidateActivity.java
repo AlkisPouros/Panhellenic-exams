@@ -69,8 +69,18 @@ public class CandidateActivity extends AppCompatActivity implements CandidateVie
             }
         });
 
-        btnFindDepartment.setOnClickListener(v->FindDepartment());
-        btnFindAvailableDepartments.setOnClickListener(v->FindAvailableDepartments());
+        btnFindDepartment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FindDepartment();
+            }
+
+        });
+
+        btnFindAvailableDepartments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){FindAvailableDepartments();}
+        });
     }
 
     @Override

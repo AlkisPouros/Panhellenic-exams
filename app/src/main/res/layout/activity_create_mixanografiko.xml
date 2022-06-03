@@ -8,27 +8,47 @@
     <Button
         android:id="@+id/RegisterDepartments"
         android:layout_width="173dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="522dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="516dp"
         android:text="Register Departments"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtRegisterDepartments" />
+        app:layout_constraintTop_toBottomOf="@+id/txtRegisterDepartments"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/txtRegisterDepartments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="112dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="108dp"
         android:text="Register Departments"
-        app:layout_constraintBottom_toTopOf="@+id/RegisterDepartments"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/RegisterDepartments"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="155dp"
+        android:layout_height="470dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegisterDepartments">
+
+        <TextView
+            android:id="@+id/RegisteredDepartmentID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registered department ID" />
+
+        <TextView
+            android:id="@+id/RegisteredDepartmentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registered department Name" />
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

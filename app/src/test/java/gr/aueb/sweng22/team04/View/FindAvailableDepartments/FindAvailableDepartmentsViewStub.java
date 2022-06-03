@@ -4,8 +4,5 @@ import gr.aueb.sweng22.team04.view.FindAvailableDepartments.FindAvailableDepartm
 
 public class FindAvailableDepartmentsViewStub implements FindAvailableDepartmentsView {
 
-    @Override
-    public void showAvailableDepartments() {
 
-    }
 }

@@ -1,11 +1,15 @@
 package gr.aueb.sweng22.team04.view.FindAvailableDepartments;
+import java.util.ArrayList;
 
 import gr.aueb.sweng22.team04.dao.CandidateDAO;
 import gr.aueb.sweng22.team04.dao.DepartmentDAO;
 import gr.aueb.sweng22.team04.model.Candidate;
 import gr.aueb.sweng22.team04.model.Department;
 
+
+
 public class FindAvailableDepartmentsPresenter {
+
 
     private FindAvailableDepartmentsView view;
     private CandidateDAO candidateDAO;
@@ -34,20 +38,19 @@ public class FindAvailableDepartmentsPresenter {
         this.password = password;
     }
 
-    public void onFindAvailableDepartments()
-    {
 
-        Candidate candidate = this.candidateDAO.findCandidate(email,password);
+    public ArrayList<Department> onFindAvailableDepartments() {
 
-        for(Department department : this.departmentDAO.findAll())
-        {
-            if(candidate.getMoria()>= department.getEBE() && candidate.getField().getName().equals(department.getField().getName()))
-            {
+
+        Candidate candidate = this.candidateDAO.findCandidate(email, password);
+
+        for (Department department : this.departmentDAO.findAll()) {
+            if (candidate.getMoria() >= department.getEBE() && candidate.getField().getName().equals(department.getField().getName())) {
                 candidate.getAvailableDepartmentperUser().add(department);
+
             }
         }
-
+        return candidate.getAvailableDepartmentperUser();
 
     }
-
 }
