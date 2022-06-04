@@ -8,12 +8,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.List;
 
 import gr.aueb.sweng22.team04.R;
-import gr.aueb.sweng22.team04.model.Department;
 import gr.aueb.sweng22.team04.model.RegisteredDepartment;
 
 public class RegisteredDepartmentAdapter extends RecyclerView.Adapter<RegisteredDepartmentAdapter.RegisteredDepartmentViewHolder>{
@@ -26,11 +23,10 @@ public class RegisteredDepartmentAdapter extends RecyclerView.Adapter<Registered
         this.dataSourceList = dataSourceList;
     }
 
-    @NotNull
     @Override
     public RegisteredDepartmentAdapter.RegisteredDepartmentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        return new DepartmentAdapter.DepartmentViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.RegisteredDepartmentsRecyclerView, parent, false));
+        return new RegisteredDepartmentAdapter.RegisteredDepartmentViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_create_mixanografiko, parent, false));
 
 
     }
@@ -62,5 +58,6 @@ public class RegisteredDepartmentAdapter extends RecyclerView.Adapter<Registered
 
 
     }
+
 
 }

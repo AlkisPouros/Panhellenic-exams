@@ -58,9 +58,7 @@ public class CandidateActivity extends AppCompatActivity implements CandidateVie
 
         btnCalculateMarks.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                showCandidateMark();
-            }
+            public void onClick(View view) { showCandidateMark(); }
         });
         btnCreateMixanografiko.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,14 +70,14 @@ public class CandidateActivity extends AppCompatActivity implements CandidateVie
         btnFindDepartment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FindDepartment();
+                findDepartment();
             }
 
         });
 
         btnFindAvailableDepartments.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){FindAvailableDepartments();}
+            public void onClick(View view){ findAvailableDepartments(); }
         });
     }
 
@@ -93,15 +91,22 @@ public class CandidateActivity extends AppCompatActivity implements CandidateVie
 
     private void createMixanografiko()
     {
-        startActivity(new Intent(CandidateActivity.this, MixanografikoActivity.class));
+        Intent cm = new Intent(CandidateActivity.this, MixanografikoActivity.class);
+        cm.putExtra("email",candidatePresenter.getEmail());
+        cm.putExtra("password",candidatePresenter.getPassword());
+        startActivity(cm);
     }
-    private void FindDepartment()
+    private void findDepartment()
     {
-        startActivity(new Intent(CandidateActivity.this, FindDepartmentActivity.class));
+        Intent fd = new Intent(CandidateActivity.this, FindDepartmentActivity.class);
+        startActivity(fd);
     }
-    private void FindAvailableDepartments()
+    private void findAvailableDepartments()
     {
-        startActivity(new Intent(CandidateActivity.this, FindAvailableDepartmentsActivity.class));
+        Intent fad = new Intent(CandidateActivity.this, FindAvailableDepartmentsActivity.class);
+        fad.putExtra("email",candidatePresenter.getEmail());
+        fad.putExtra("password",candidatePresenter.getPassword());
+        startActivity(fad);
     }
 
 

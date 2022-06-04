@@ -30,6 +30,14 @@ public class FindAvailableDepartmentsPresenter {
         this.departmentDAO = departmentDAO;
     }
 
+    public CandidateDAO getCandidateDAO() {
+        return candidateDAO;
+    }
+
+    public DepartmentDAO getDepartmentDAO() {
+        return departmentDAO;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }
@@ -42,7 +50,7 @@ public class FindAvailableDepartmentsPresenter {
     public ArrayList<Department> onFindAvailableDepartments() {
 
 
-        Candidate candidate = this.candidateDAO.findCandidate(email, password);
+        Candidate candidate = this.getCandidateDAO().findCandidate(email, password);
 
         for (Department department : this.departmentDAO.findAll()) {
             if (candidate.getMoria() >= department.getEBE() && candidate.getField().getName().equals(department.getField().getName())) {

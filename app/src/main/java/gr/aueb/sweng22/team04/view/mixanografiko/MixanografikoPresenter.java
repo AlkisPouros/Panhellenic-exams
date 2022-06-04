@@ -1,5 +1,7 @@
 package gr.aueb.sweng22.team04.view.mixanografiko;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 
 import gr.aueb.sweng22.team04.dao.CandidateDAO;
@@ -44,6 +46,8 @@ public class MixanografikoPresenter {
         this.candidateDAO = candidateDAO;
     }
 
+    public CandidateDAO getCandidateDAO() { return candidateDAO; }
+
     public void setRegisteredDepartmentDAO(RegisteredDepartmentDAO registeredDepartmentDAO) {
         this.registeredDepartmentDAO = registeredDepartmentDAO;
     }
@@ -52,9 +56,7 @@ public class MixanografikoPresenter {
         this.email = email;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+    public void setPassword(String password) { this.password = password; }
     public MixanografikoDAO getMixanografikoDAO()
     {
         return mixanografikoDAO;
@@ -63,8 +65,12 @@ public class MixanografikoPresenter {
 
     public ArrayList<RegisteredDepartment> onRegisterDepartments()
     {
+        Candidate candidate = this.getCandidateDAO().findCandidate(email,password); //see CandidatePresenter to be checked again
 
-        Candidate candidate = this.candidateDAO.findCandidate(email,password); //see CandidatePresenter to be checked again
+        //Log.d("email and password: ",email+" "+password);
+        //if(candidate==null) Log.d("my error ","my error");
+
+        //Log.d("email and password: ",candidate.getEmail()+" "+candidate.getPassword());
 
         int counter = 0;
 
