@@ -4,7 +4,6 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -13,6 +12,14 @@ import gr.aueb.sweng22.team04.dao.MixanografikoDAO;
 import gr.aueb.sweng22.team04.dao.RegisteredDepartmentDAO;
 import gr.aueb.sweng22.team04.model.Candidate;
 import gr.aueb.sweng22.team04.model.RegisteredDepartment;
+
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * presenter for admin
+ */
 
 public class AdminPresenter {
     private AdminView view;

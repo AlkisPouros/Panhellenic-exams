@@ -6,7 +6,13 @@ import gr.aueb.sweng22.team04.dao.DepartmentDAO;
 import gr.aueb.sweng22.team04.model.Candidate;
 import gr.aueb.sweng22.team04.model.Department;
 
-
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * presenter for available departments
+ */
 
 public class FindAvailableDepartmentsPresenter {
 

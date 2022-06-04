@@ -5,7 +5,14 @@ import gr.aueb.sweng22.team04.dao.ScientificFieldDAO;
 import gr.aueb.sweng22.team04.dao.UserDAO;
 import gr.aueb.sweng22.team04.model.Candidate;
 import gr.aueb.sweng22.team04.model.ScientificField;
-import gr.aueb.sweng22.team04.model.User;
+
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * presenter for sign up
+ */
 
 public class SignUpPresenter {
 
@@ -42,6 +49,17 @@ public class SignUpPresenter {
         return this.userDAO;
     }
 
+    /**
+     * this method is called when a candidate wants to sign up (to create an account). It checks if the given info is correct and follows specific rules.
+     * @param firstName
+     * @param lastName
+     * @param policeNumberID
+     * @param birthday
+     * @param email
+     * @param password
+     * @param scientificField
+     * @return true if everything was successful or false if something is wrong
+     */
     public Boolean onSignUp(String firstName, String lastName, String policeNumberID ,String birthday, String email, String password, String scientificField){
         if(firstName.isEmpty() || lastName.isEmpty() || policeNumberID.isEmpty() || birthday.isEmpty() || email.isEmpty() || password.isEmpty()){
             view.emptyField();

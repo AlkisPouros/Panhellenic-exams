@@ -9,6 +9,14 @@ import gr.aueb.sweng22.team04.memorydao.ExaminerDAOMemory;
 import gr.aueb.sweng22.team04.memorydao.MarkedLessonDAOMemory;
 import gr.aueb.sweng22.team04.memorydao.ScientificFieldDAOMemory;
 
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * viewmodel for examiner
+ */
+
 public class ExaminerViewModel extends ViewModel {
 
     private ExaminerPresenter presenter;

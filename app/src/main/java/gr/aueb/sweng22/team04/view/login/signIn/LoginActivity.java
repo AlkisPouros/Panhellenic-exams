@@ -1,14 +1,10 @@
 package gr.aueb.sweng22.team04.view.login.signIn;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +18,13 @@ import gr.aueb.sweng22.team04.view.candidate.CandidateActivity;
 import gr.aueb.sweng22.team04.view.examiner.ExaminerActivity;
 import gr.aueb.sweng22.team04.view.login.signUp.SignUpActivity;
 
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * activity for login
+ */
 
 public class LoginActivity extends AppCompatActivity implements LoginView{
 
@@ -68,6 +71,10 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
         });
     }
 
+    /**
+     * this method checks if the user exists in memory with the help of onLogin method.
+     * If the user does exists it directs them to the appropriate activity based on the role
+     */
     private void signIn(){
         String email = edtEmail.getText().toString();
         String password = edtPassword.getText().toString();

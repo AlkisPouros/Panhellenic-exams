@@ -1,17 +1,20 @@
 package gr.aueb.sweng22.team04.view.candidate;
 
-import java.util.ArrayList;
-
 import gr.aueb.sweng22.team04.dao.CandidateDAO;
 import gr.aueb.sweng22.team04.dao.DepartmentDAO;
 import gr.aueb.sweng22.team04.dao.LessonDAO;
 import gr.aueb.sweng22.team04.dao.MarkedLessonDAO;
 import gr.aueb.sweng22.team04.dao.MixanografikoDAO;
-import gr.aueb.sweng22.team04.memorydao.CandidateDAOMemory;
 import gr.aueb.sweng22.team04.model.Candidate;
-import gr.aueb.sweng22.team04.model.Department;
 import gr.aueb.sweng22.team04.model.MarkedLesson;
-import gr.aueb.sweng22.team04.view.login.signIn.LoginView;
+
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * candidate presenter
+ */
 
 public class CandidatePresenter {
     private CandidateView view;
@@ -53,6 +56,10 @@ public class CandidatePresenter {
 
     public CandidateDAO getCandidateDAO(){return candidateDAO; }
 
+    /**
+     * calculates the final mark of a candidate with this formula by iterating in marked lessons
+     * @return  int total mark
+     */
     public int onCalculateMarks()
     {
         double totalMark = 0;
@@ -69,7 +76,4 @@ public class CandidatePresenter {
         candidate.setMoria((int) totalMark);
         return (int)totalMark;
     }
-
-
-
 }

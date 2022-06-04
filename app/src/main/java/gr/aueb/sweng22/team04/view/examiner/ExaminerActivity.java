@@ -13,6 +13,14 @@ import gr.aueb.sweng22.team04.R;
 import gr.aueb.sweng22.team04.model.Candidate;
 import gr.aueb.sweng22.team04.model.Examiner;
 
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * activity for examiner
+ */
+
 public class ExaminerActivity extends AppCompatActivity implements ExaminerView {
 
     private ExaminerViewModel viewModel;
@@ -67,6 +75,9 @@ public class ExaminerActivity extends AppCompatActivity implements ExaminerView 
         });
     }
 
+    /**
+     * finds candidate with the firstname and lastname
+     */
     private void findCandidate(){
         String firstName = edtCandidateFirstName.getText().toString();
         String lastName = edtCandidateLastName.getText().toString();
@@ -83,9 +94,15 @@ public class ExaminerActivity extends AppCompatActivity implements ExaminerView 
         }
     }
 
+    /**
+     * the examiner marks a candidate for a specific lesson
+     */
     private void markCandidate(){
         String tempMark = edtLessonMark.getText().toString();
 
+        if(tempMark.isEmpty()){
+            emptyMark();
+        }
         if(tempMark != null){
             double mark = Double.parseDouble(tempMark);
             viewModel.getPresenter().onSaveMark(examiner, candidateResult, mark);

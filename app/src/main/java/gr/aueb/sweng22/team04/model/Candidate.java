@@ -3,6 +3,14 @@ package gr.aueb.sweng22.team04.model;
 import java.util.Date;
 import java.util.ArrayList;
 
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * model for candidate
+ */
+
 public class Candidate extends User{
 
     private String name;
@@ -16,7 +24,16 @@ public class Candidate extends User{
     private ScientificField field;
     private Department finalDepartment;
 
-
+    /**
+     * constructor for candidate
+     * @param password
+     * @param email
+     * @param name
+     * @param lastName
+     * @param birthday
+     * @param idNumber
+     * @param field
+     */
     public Candidate(String password, String email, String name, String lastName, String birthday, String idNumber, ScientificField field) {
         super(password, email, "Candidate");
         this.name = name;
@@ -78,11 +95,7 @@ public class Candidate extends User{
     public ArrayList<Department> getAvailableDepartmentperUser() {
         return this.availableDepartmentperUser;
     }
-    /*
-    public void setAvailableDepartmentperUser(ArrayList<Department> availableDepartmentperUser) {
-        this.availableDepartmentperUser = availableDepartmentperUser;
-    }
-    */
+
     public ScientificField getField() {
         return field;
     }
@@ -90,12 +103,7 @@ public class Candidate extends User{
     public Mixanografiko getMixanografiko() {
         return mixanografiko;
     }
-    /*
-    public void createMixanografiko() {
-        this.mixanografiko = new Mixanografiko();
-        this.findAvailableDepartments();
-    }
-    */
+
     public int getMoria() {
         return moria;
     }
@@ -103,30 +111,8 @@ public class Candidate extends User{
     public void setMoria(int moria) {
         this.moria = moria;
     }
-    /*
-    public void calculateMarks(){
-        double totalMark = 0;
-        for(MarkedLesson lesson: this.allMarks){
-            totalMark += lesson.getMark() * (2 + lesson.getLesson().getCoefficient());
-        }
-        totalMark *= 100;
-        this.setMoria((int) totalMark);
-    }
 
-    public void addMark(MarkedLesson markedLesson){
-        this.allMarks.add(markedLesson);
-    }
-    */
     public ArrayList<MarkedLesson> getAllMarks(){
         return this.allMarks;
     }
-    /*
-    public void findAvailableDepartments(){
-        for(Department department : Helper.allDepartments) {
-            if (this.getMoria() >= department.getEBE() && this.getField().getName().equals(department.getField().getName())) {
-                this.availableDepartmentperUser.add(department);
-            }
-        }
-    }
-    */
 }

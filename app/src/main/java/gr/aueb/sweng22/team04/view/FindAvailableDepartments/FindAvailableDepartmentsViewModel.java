@@ -7,6 +7,14 @@ import androidx.lifecycle.ViewModel;
 import gr.aueb.sweng22.team04.memorydao.CandidateDAOMemory;
 import gr.aueb.sweng22.team04.memorydao.DepartmentDAOMemory;
 
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * presenter for available departments
+ */
+
 public class FindAvailableDepartmentsViewModel extends ViewModel {
 
     FindAvailableDepartmentsPresenter presenter;

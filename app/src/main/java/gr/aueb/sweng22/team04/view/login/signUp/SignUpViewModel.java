@@ -8,6 +8,14 @@ import gr.aueb.sweng22.team04.memorydao.CandidateDAOMemory;
 import gr.aueb.sweng22.team04.memorydao.ScientificFieldDAOMemory;
 import gr.aueb.sweng22.team04.memorydao.UserDAOMemory;
 
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * view model for sign up
+ */
+
 public class SignUpViewModel extends ViewModel {
 
     private SignUpPresenter presenter;
