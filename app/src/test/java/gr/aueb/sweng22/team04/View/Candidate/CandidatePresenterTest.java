@@ -33,6 +33,11 @@ public class CandidatePresenterTest {
         presenter.setCandidateDAO(new CandidateDAOMemory());
     }
 
+    /**
+     * This test checks if the correct amount of moria is calculated based on the candidate's marked lessons.
+     * First we find the candidate and then we calculate the total score based on marked lesson.
+     * At last we check if the method produced the correct number.
+     */
     @Test
     public void onCalculateMarks()
     {

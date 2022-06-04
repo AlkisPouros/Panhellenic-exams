@@ -42,10 +42,11 @@ public class FindAvailableDepartmentsPresenterTest {
 
         candidatePresenter.setCandidateDAO(new CandidateDAOMemory());
         candidatePresenter.setMarkedLessonDAO(new MarkedLessonDAOMemory());
-
-
-
     }
+
+    /**
+     * this method checks that the candidate gets the correct amount of available department for him/her comparing moria (final mark) and department's EBE
+     */
     @Test
     public void onFindAvailableDepartments()
     {

@@ -29,8 +29,11 @@ public class FindDepartmentPresenterTest {
         presenter.setView(viewStub);
 
         presenter.setDepartmentDAO(new DepartmentDAOMemory());
-
     }
+
+    /**
+     * this method checks that the correct department is found by inserting department's id
+     */
     @Test
     public void onFindDepartment()
     {

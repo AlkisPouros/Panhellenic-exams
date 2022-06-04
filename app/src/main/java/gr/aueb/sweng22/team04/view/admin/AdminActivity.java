@@ -2,6 +2,7 @@ package gr.aueb.sweng22.team04.view.admin;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -44,7 +45,13 @@ public class AdminActivity extends AppCompatActivity implements AdminView {
         txtRes = findViewById(R.id.Results);
         btnCalcRes = findViewById(R.id.CalculateResults);
 
-
+        btnCalcRes.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
+            @Override
+            public void onClick(View view) {
+                showResults();
+            }
+        });
 
 
 

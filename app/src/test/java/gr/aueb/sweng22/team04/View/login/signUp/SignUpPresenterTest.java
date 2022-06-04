@@ -31,6 +31,9 @@ public class SignUpPresenterTest {
         presenter.setUserDAO(new UserDAOMemory());
     }
 
+    /**
+     * checks for errors if the user lefts any field empty
+     */
     @Test
     public void showErrorForEmptyField(){
         presenter.onSignUp("", "test", "AK35663", "10/12/2005", "hello@gmail.com", "123456789", "4o pedio");
@@ -38,7 +41,9 @@ public class SignUpPresenterTest {
         assertEquals(false, viewStub.getStatus());
     }
 
-
+    /**
+     * checks that an error is returned if user enters email in a wrong format
+     */
     @Test
     public void showErrorForInvalidEmail(){
         presenter.onSignUp("test", "test", "AK35663", "10/12/2005", "hellogmail.com", "123456789", "4o pedio");
@@ -46,6 +51,9 @@ public class SignUpPresenterTest {
         assertEquals(false, viewStub.getStatus());
     }
 
+    /**
+     * checks that an error is returned if user enters password in a wrong format
+     */
     @Test
     public void showErrorForInvalidPassword(){
         presenter.onSignUp("test", "test", "AK35663", "10/12/2005", "hello@gmail.com", "123456", "4o pedio");
@@ -53,6 +61,9 @@ public class SignUpPresenterTest {
         assertEquals(false, viewStub.getStatus());
     }
 
+    /**
+     * checks that an error is returned if user enters ID number in a wrong format
+     */
     @Test
     public void showErrorForInvalidNumberID(){
         presenter.onSignUp("test", "test", "A35663", "10/12/2005", "hello@gmail.com", "123456789", "4o pedio");
@@ -60,6 +71,9 @@ public class SignUpPresenterTest {
         assertEquals(false, viewStub.getStatus());
     }
 
+    /**
+     * checks that we get zero errors and candidates account is saved correctly
+     */
     @Test
     public void successRegistration(){
         presenter.onSignUp("test", "test", "AK35663", "10/12/2005", "hello56@gmail.com", "123456789", "4o pedio");

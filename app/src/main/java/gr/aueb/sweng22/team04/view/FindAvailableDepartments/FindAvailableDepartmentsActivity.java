@@ -1,9 +1,7 @@
 package gr.aueb.sweng22.team04.view.FindAvailableDepartments;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +13,9 @@ import gr.aueb.sweng22.team04.R;
 import gr.aueb.sweng22.team04.dao.Initializer;
 import gr.aueb.sweng22.team04.memorydao.MemoryInitializer;
 import gr.aueb.sweng22.team04.model.Department;
-import gr.aueb.sweng22.team04.view.Adapter.DepartmentAdapter;
+import gr.aueb.sweng22.team04.view.Adapter.FindAvailableDepartmentsAdapter;
+import gr.aueb.sweng22.team04.view.candidate.CandidatePresenter;
+import gr.aueb.sweng22.team04.view.candidate.CandidateViewModel;
 
 
 import java.util.ArrayList;
@@ -35,6 +35,7 @@ public class FindAvailableDepartmentsActivity extends AppCompatActivity implemen
     FindAvailableDepartmentsPresenter presenter;
     FindAvailableDepartmentsViewModel viewmodel;
 
+    CandidatePresenter candidatePresenter;
 
 
     private Button btnFindAvailDepartments;
@@ -50,13 +51,25 @@ public class FindAvailableDepartmentsActivity extends AppCompatActivity implemen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_available_departments);
         viewmodel = new ViewModelProvider(this).get(FindAvailableDepartmentsViewModel.class);
+        CandidateViewModel candidateViewModel = new CandidateViewModel();
         presenter = viewmodel.getPresenter();
         presenter.setView(this);
+        candidatePresenter = candidateViewModel.getPresenter();
 
         Initializer initializer = new MemoryInitializer();
         initializer.prepareData();
 
+        Bundle extras = getIntent().getExtras();
+        String candidateEmail = extras.getString("email");
+        String candidatePassword = extras.getString("password");
 
+
+
+        candidatePresenter.setEmail(candidateEmail);
+        candidatePresenter.setPassword(candidatePassword);
+
+        presenter.setEmail(candidateEmail);
+        presenter.setPassword(candidatePassword);
 
 
         txtFindDeps = findViewById(R.id.ShowAvailableDepartments);
@@ -66,9 +79,10 @@ public class FindAvailableDepartmentsActivity extends AppCompatActivity implemen
         //FindAvailableDepartments on click
 
         List<Department> departmentList = new ArrayList<>(viewmodel.getPresenter().onFindAvailableDepartments());
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
+        recyclerView.setLayoutManager(layoutManager);
 
-        recyclerView.setAdapter(new DepartmentAdapter(departmentList));
+        recyclerView.setAdapter(new FindAvailableDepartmentsAdapter(departmentList));
 
 
 
