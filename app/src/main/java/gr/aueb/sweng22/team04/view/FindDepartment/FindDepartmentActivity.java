@@ -36,21 +36,20 @@ public class FindDepartmentActivity extends AppCompatActivity implements FindDep
         initializer.prepareData();
 
         Bundle extras = getIntent().getExtras();
-        String Candidate_email = extras.getString("email");
+        /*String Candidate_email = extras.getString("email");
         String Candidate_password = extras.getString("password");
 
         candidatePresenter.setEmail(Candidate_email);
-        candidatePresenter.setPassword(Candidate_password);
+        candidatePresenter.setPassword(Candidate_password);*/
 
         edtID = (EditText) findViewById(R.id.EnterDepartmentID);
-        txtSearchForDepartment = findViewById(R.id.FindDepartment);
+        txtSearchForDepartment = findViewById(R.id.SearchForDepartment);
         txtDepartment = findViewById(R.id.Department);
+        btnFindDepartment = findViewById(R.id.FindDepartment);
 
         btnFindDepartment.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                showDepartment();
-            }
+            public void onClick(View view) { showDepartment(); }
         });
 
     }

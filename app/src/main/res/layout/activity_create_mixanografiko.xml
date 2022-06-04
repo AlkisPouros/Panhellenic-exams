@@ -31,12 +31,14 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="155dp"
+        android:layout_width="300dp"
         android:layout_height="470dp"
         android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterDepartments">
+        app:layout_constraintTop_toBottomOf="@+id/RegisterDepartments"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:ignore="ExtraText">
 
         <TextView
             android:id="@+id/RegisteredDepartmentID"
