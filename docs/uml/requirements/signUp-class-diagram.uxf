@@ -56,21 +56,21 @@ ScientificFieldDAO
 --
 addScientificField(entity:ScientificField):void
 findScientificField(name:String): ScientificField
-findAll():List&lt;ScientificField&gt;
+findAll():List
 delete(scientificField:ScientificField):void
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>850</x><y>742</y><w>260</w><h>110</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 UserDAO
 --
 addUser(user:User):void
 findUser(email:String):User
-findAll():List&lt;User&gt;
+findAll():List
 delete(user:User):void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>560</x><y>732</y><w>260</w><h>120</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 CandidateDAO
 --
 addCandidate(entity:Candidate):void
 findCandidate(email:String, password:String):Candidate
 findCandidateToMark(firstName:String,lastName:String)
-findAll():List&lt;Candidate&gt;
+findAll():List
 delete(candidate:Candidate):void
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>640</y><w>140</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
 --ScientificFieldDAO

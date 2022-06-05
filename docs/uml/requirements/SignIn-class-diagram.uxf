@@ -54,7 +54,7 @@ UserDAO
 --
 addUser(user:User):void
 findUser(email:String):User
-findAll():List&lt;User&gt;
+findAll():List
 delete(user:User):void
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>670</y><w>80</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
 1
