@@ -73,5 +73,7 @@ public class MixanografikoPresenterTest {
         departmentPresenter.onFindAvailableDepartments();
         presenter.onRegisterDepartments();
         assertEquals(3,presenter.getMixanografikoDAO().findMixanografiko("AK457841").getRegisteredDepartments().size());
+        assertEquals("OPA",presenter.getMixanografikoDAO().findMixanografiko("AK457841").getRegisteredDepartments().get(0).getDepartment().getDepartmentName());
+
     }
 }

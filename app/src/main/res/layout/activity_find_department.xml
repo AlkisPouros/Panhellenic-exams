@@ -7,22 +7,23 @@
 
     <Button
         android:id="@+id/FindDepartment"
-        android:layout_width="163dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="165dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="21dp"
         android:text="Find Department"
         app:layout_constraintBottom_toTopOf="@+id/EnterDepartmentID"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/SearchForDepartment"
+        app:layout_constraintStart_toStartOf="@+id/SearchForDepartment"
         app:layout_constraintTop_toBottomOf="@+id/SearchForDepartment" />
 
     <TextView
         android:id="@+id/SearchForDepartment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="173dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginTop="157dp"
+        android:layout_marginBottom="21dp"
         android:text="Search for department using ID"
         app:layout_constraintBottom_toTopOf="@+id/FindDepartment"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +34,7 @@
         android:id="@+id/EnterDepartmentID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="37dp"
         android:ems="10"
         android:hint="Enter department ID"
         android:inputType="number"
@@ -45,9 +46,9 @@
 
     <TextView
         android:id="@+id/Department"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="376dp"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="357dp"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
