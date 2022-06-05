@@ -28,6 +28,9 @@ public class LoginPresenterTest {
         presenter.setUserDAO(new UserDAOMemory());
     }
 
+    /**
+     * checks for errors if the user lefts any field empty
+     */
     @Test
     public void showErrorForEmptyField(){
         presenter.onLogin("", "");
@@ -35,6 +38,9 @@ public class LoginPresenterTest {
         assertEquals(false, viewStub.getStatus());
     }
 
+    /**
+     * checks that we get an error when a user mistakes their login credentials
+     */
     @Test
     public void showErrorForInvalidLogin(){
         presenter.onLogin("hello@gmail.com", "1234567891");
@@ -42,6 +48,9 @@ public class LoginPresenterTest {
         assertEquals(false, viewStub.getStatus());
     }
 
+    /**
+     * checks that an error is returned if user enters email in a wrong format
+     */
     @Test
     public void showErrorForInvalidEmail(){
         presenter.onLogin("hellogmail.com", "12345678");
@@ -49,6 +58,9 @@ public class LoginPresenterTest {
         assertEquals(false, viewStub.getStatus());
     }
 
+    /**
+     * checks that an error is returned if user enters password in a wrong format
+     */
     @Test
     public void showErrorForInvalidPassword(){
         presenter.onLogin("hello@gmail.com", "123456");
@@ -56,6 +68,9 @@ public class LoginPresenterTest {
         assertEquals(false, viewStub.getStatus());
     }
 
+    /**
+     * checks that we get zero errors when a user enters the correct credentials
+     */
     @Test
     public void successLogin(){
         presenter.onLogin("hello@gmail.com", "12345678");

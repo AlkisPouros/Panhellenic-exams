@@ -56,10 +56,12 @@ public class MixanografikoPresenterTest {
         departmentPresenter.setDepartmentDAO(new DepartmentDAOMemory());
     }
 
+    /**
+     * this test method checks that a mixanografiko form is saved correctly and with the chosen departments inside
+     */
     @Test
     public void onRegisterDepartments()
     {
-
         presenter.setEmail("hello@gmail.com");
         presenter.setPassword("12345678");
         candidatePresenter.setEmail("hello@gmail.com");
@@ -67,13 +69,9 @@ public class MixanografikoPresenterTest {
         departmentPresenter.setEmail("hello@gmail.com");
         departmentPresenter.setPassword("12345678");
 
-
         candidatePresenter.onCalculateMarks();
         departmentPresenter.onFindAvailableDepartments();
         presenter.onRegisterDepartments();
         assertEquals(3,presenter.getMixanografikoDAO().findMixanografiko("AK457841").getRegisteredDepartments().size());
-
     }
-
-
 }

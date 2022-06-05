@@ -21,6 +21,13 @@ import gr.aueb.sweng22.team04.view.candidate.CandidateViewModel;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * activity for available departments
+ */
 
 public class FindAvailableDepartmentsActivity extends AppCompatActivity implements FindAvailableDepartmentsView {
 

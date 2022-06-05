@@ -4,9 +4,14 @@ import android.util.Log;
 
 import androidx.lifecycle.ViewModel;
 
-import gr.aueb.sweng22.team04.dao.Initializer;
-import gr.aueb.sweng22.team04.memorydao.CandidateDAOMemory;
-import gr.aueb.sweng22.team04.memorydao.MemoryInitializer;
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * view model for login
+ */
+
 import gr.aueb.sweng22.team04.memorydao.UserDAOMemory;
 
 public class LoginViewModel extends ViewModel {

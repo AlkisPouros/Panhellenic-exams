@@ -1,5 +1,12 @@
 package gr.aueb.sweng22.team04.model;
 
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * model for department
+ */
 public class Department {
 
     private String departmentName;
@@ -10,6 +17,13 @@ public class Department {
     private int EBE;
     private int enterBase;
 
+    /**
+     * constructor for department
+     * @param departmentName
+     * @param departmentID
+     * @param maxNumberOfCandidates
+     * @param field
+     */
     public Department(String departmentName, int departmentID, int maxNumberOfCandidates, ScientificField field) {
         this.departmentName = departmentName;
         this.departmentID = departmentID;

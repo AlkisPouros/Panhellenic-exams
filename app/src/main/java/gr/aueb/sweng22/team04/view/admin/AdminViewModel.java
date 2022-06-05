@@ -7,7 +7,14 @@ import androidx.lifecycle.ViewModel;
 import gr.aueb.sweng22.team04.memorydao.CandidateDAOMemory;
 import gr.aueb.sweng22.team04.memorydao.MixanografikoDAOMemory;
 import gr.aueb.sweng22.team04.memorydao.RegisteredDepartmentDAOMemory;
-import gr.aueb.sweng22.team04.view.admin.AdminPresenter;
+
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * view model for admin
+ */
 
 public class AdminViewModel extends ViewModel {
     private AdminPresenter presenter;

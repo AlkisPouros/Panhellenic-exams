@@ -3,6 +3,14 @@ package gr.aueb.sweng22.team04.view.login.signIn;
 import gr.aueb.sweng22.team04.dao.UserDAO;
 import gr.aueb.sweng22.team04.model.User;
 
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * presenter for login
+ */
+
 public class LoginPresenter {
 
     private LoginView view;
@@ -20,6 +28,12 @@ public class LoginPresenter {
         this.userDAO = userDAO;
     }
 
+    /**
+     * this method is called when a user tries to sign in. It checks if the given info is correct and follows specific rules.
+     * @param email
+     * @param password
+     * @return user with this email and password
+     */
     public User onLogin(String email, String password){
         if(email.isEmpty() || password.isEmpty()){
             view.EmptyField();

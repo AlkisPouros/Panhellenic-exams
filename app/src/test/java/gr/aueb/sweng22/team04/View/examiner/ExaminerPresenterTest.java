@@ -36,6 +36,9 @@ public class ExaminerPresenterTest {
         presenter.setScientificFieldDAO(new ScientificFieldDAOMemory());
     }
 
+    /**
+     * checks if the user lefts any fields empty. If yes we want to check if that produces an error.
+     */
     @Test
     public void showEmptySearchCriteria(){
         //invalid search criteria
@@ -51,6 +54,9 @@ public class ExaminerPresenterTest {
         assertEquals(false, viewStub.getStatus());
     }
 
+    /**
+     * this test checks if we get an error if the result (candidate) does not exit in memory
+     */
     @Test
     public void showCandidateNotFound(){
         //this user does not exit in initializer
@@ -60,6 +66,9 @@ public class ExaminerPresenterTest {
         assertEquals(false, viewStub.getStatus());
     }
 
+    /**
+     * checks that we get no errors when the candidate does exits
+     */
     @Test
     public void findSuccessCandidateForExaminer(){
         Candidate candidate = presenter.onFindCandidate("tester22", "tester22");
@@ -68,6 +77,9 @@ public class ExaminerPresenterTest {
         assertEquals(true, viewStub.getStatus());
     }
 
+    /**
+     * this test checks if we get an error when an examiner inserts an invalid mark
+     */
     @Test
     public void showInvalidMark(){
         Examiner examiner = new Examiner("examinerTest", "examinerTest", "1234567890", "tester123@gmail.com");
@@ -83,6 +95,9 @@ public class ExaminerPresenterTest {
         assertEquals(4, presenter.getMarkedLessonDAO().findAll().size());
     }
 
+    /**
+     *this test method checks if the mark for a specific lesson has been saved in memory correctly
+     */
     @Test
     public void showSuccessSaveMark(){
         Examiner examiner = new Examiner("examinerTest", "examinerTest", "1234567890", "tester123@gmail.com");
@@ -103,6 +118,9 @@ public class ExaminerPresenterTest {
 
     }
 
+    /**
+     * this method test checks if the correct examiner is found based on the information given
+     */
     @Test
     public void findExaminer(){
         Examiner examiner = new Examiner("examinerTest", "examinerTest", "1234567890", "tester123@gmail.com");

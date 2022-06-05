@@ -3,18 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Mathimata/TexLog/Ergasia_Tex_Log/team04/app/src/main/res/layout/aaa.xml" value="0.20520833333333333" />
-        <entry key="..\:/Mathimata/TexLog/Ergasia_Tex_Log/team04/app/src/main/res/layout/activity_create_mixanografiko.xml" value="0.22" />
-        <entry key="..\:/Mathimata/TexLog/Ergasia_Tex_Log/team04/app/src/main/res/layout/activity_find_available_departments.xml" value="0.18802083333333333" />
-        <entry key="..\:/Mathimata/TexLog/Ergasia_Tex_Log/team04/app/src/main/res/layout/activity_find_department.xml" value="0.18802083333333333" />
-        <entry key="..\:/Mathimata/TexLog/Ergasia_Tex_Log/team04/app/src/main/res/layout/department_item.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/layout/activity_admin.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_candidate.xml" value="0.3723958333333333" />
         <entry key="app/src/main/res/layout/activity_create_mixanografiko.xml" value="0.3723958333333333" />
         <entry key="app/src/main/res/layout/activity_examiner.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_find_available_departments.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/activity_find_department.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17299898682877407" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.3723958333333333" />
         <entry key="app/src/main/res/layout/content_login.xml" value="0.17299898682877407" />
+        <entry key="app/src/main/res/layout/department_item.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.17299898682877407" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.17299898682877407" />
       </map>

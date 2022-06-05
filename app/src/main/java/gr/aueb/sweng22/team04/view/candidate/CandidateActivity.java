@@ -17,6 +17,14 @@ import gr.aueb.sweng22.team04.view.mixanografiko.MixanografikoActivity;
 import gr.aueb.sweng22.team04.dao.Initializer;
 import gr.aueb.sweng22.team04.memorydao.MemoryInitializer;
 
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * Activity for candidates screen
+ */
+
 public class CandidateActivity extends AppCompatActivity implements CandidateView {
 
     CandidatePresenter candidatePresenter;
@@ -36,8 +44,8 @@ public class CandidateActivity extends AppCompatActivity implements CandidateVie
         candidatePresenter = viewModel.getPresenter();
         candidatePresenter.setView(this);
 
-        Initializer initializer = new MemoryInitializer();
-        initializer.prepareData();
+        //Initializer initializer = new MemoryInitializer();
+        //initializer.prepareData();
 
         Bundle extras = getIntent().getExtras();
         String Candidate_email = extras.getString("email");
@@ -81,14 +89,18 @@ public class CandidateActivity extends AppCompatActivity implements CandidateVie
         });
     }
 
+    /**
+     * shows a message about the total candidate's mark
+     */
     @Override
     public void showCandidateMark()
     {
-
         txtCandidateMark.setText("Τα συνολικά μόρια είναι: " + String.valueOf(candidatePresenter.onCalculateMarks()));
-
     }
 
+    /**
+     * calls activity in order for the candidate to make a mixanografiko
+     */
     private void createMixanografiko()
     {
         Intent cm = new Intent(CandidateActivity.this, MixanografikoActivity.class);
@@ -96,11 +108,19 @@ public class CandidateActivity extends AppCompatActivity implements CandidateVie
         cm.putExtra("password",candidatePresenter.getPassword());
         startActivity(cm);
     }
+
+    /**
+     * calls activity in order for the candidate to find departments
+     */
     private void findDepartment()
     {
         Intent fd = new Intent(CandidateActivity.this, FindDepartmentActivity.class);
         startActivity(fd);
     }
+
+    /**
+     * calls activity in order for the candidate to find available departments
+     */
     private void findAvailableDepartments()
     {
         Intent fad = new Intent(CandidateActivity.this, FindAvailableDepartmentsActivity.class);

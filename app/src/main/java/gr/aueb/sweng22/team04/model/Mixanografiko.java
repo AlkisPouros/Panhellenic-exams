@@ -4,6 +4,14 @@ import java.util.Date;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * model for mixanografiko
+ */
+
 public class Mixanografiko {
 
     private int mixanografikoID;
@@ -11,6 +19,10 @@ public class Mixanografiko {
     private ArrayList<RegisteredDepartment> registeredDepartments = new ArrayList<RegisteredDepartment>();
     private String CandidateIDNumber;
 
+    /**
+     * constructor for mixanografiko
+     * @param CandidateIDNumber
+     */
     public Mixanografiko(String CandidateIDNumber){
         Random rand = new Random();
         this.mixanografikoID = rand.nextInt();
@@ -24,12 +36,7 @@ public class Mixanografiko {
     public int getMixanografikoID() {
         return mixanografikoID;
     }
-    /*
-    public void registerDepartment(int position, Department department){
-        RegisteredDepartment registeredDepartment = new RegisteredDepartment(position, department);
-        this.registeredDepartments.add(registeredDepartment);
-    }
-    */
+
     public Date getRegistrationDate() {
         return registrationDate;
     }

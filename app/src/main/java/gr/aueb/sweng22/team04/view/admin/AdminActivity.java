@@ -14,6 +14,14 @@ import gr.aueb.sweng22.team04.R;
 import gr.aueb.sweng22.team04.dao.Initializer;
 import gr.aueb.sweng22.team04.memorydao.MemoryInitializer;
 
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * activity for admin
+ */
+
 public class AdminActivity extends AppCompatActivity implements AdminView {
 
     AdminPresenter presenter;

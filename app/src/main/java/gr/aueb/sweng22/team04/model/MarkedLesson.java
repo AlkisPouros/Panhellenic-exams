@@ -1,5 +1,13 @@
 package gr.aueb.sweng22.team04.model;
 
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * model for marked lesson
+ */
+
 public class MarkedLesson {
 
     private Lesson lesson;
@@ -7,6 +15,13 @@ public class MarkedLesson {
     private Examiner examiner;
     private int CandidateID;
 
+    /**
+     * constructor for marked lesson
+     * @param lesson
+     * @param mark
+     * @param examiner
+     * @param CandidateID
+     */
     public MarkedLesson(Lesson lesson, double mark, Examiner examiner,int CandidateID) {
         this.lesson = lesson;
         this.mark = mark;

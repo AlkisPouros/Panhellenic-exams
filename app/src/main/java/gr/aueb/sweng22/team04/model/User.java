@@ -2,6 +2,13 @@ package gr.aueb.sweng22.team04.model;
 
 import java.util.Random;
 
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * model for user
+ */
 public class User {
 
     private String password;
@@ -9,6 +16,12 @@ public class User {
     private String email;
     private String UserMode;
 
+    /**
+     * constructor for user
+     * @param password
+     * @param email
+     * @param userMode
+     */
     public User(String password, String email, String userMode) {
         Random rand = new Random();
         this.id = rand.nextInt();

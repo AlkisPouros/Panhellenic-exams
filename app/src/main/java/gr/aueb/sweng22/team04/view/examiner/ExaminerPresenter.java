@@ -8,6 +8,14 @@ import gr.aueb.sweng22.team04.model.Candidate;
 import gr.aueb.sweng22.team04.model.Examiner;
 import gr.aueb.sweng22.team04.model.MarkedLesson;
 
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * examiner presenter
+ */
+
 public class ExaminerPresenter {
 
     private ExaminerView view;

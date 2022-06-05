@@ -3,7 +3,6 @@ package gr.aueb.sweng22.team04.view.login.signUp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,10 +11,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import gr.aueb.sweng22.team04.R;
-import gr.aueb.sweng22.team04.dao.Initializer;
-import gr.aueb.sweng22.team04.memorydao.MemoryInitializer;
 import gr.aueb.sweng22.team04.view.login.signIn.LoginActivity;
 
+/**
+ * @author Petovits Petros
+ * @author Pouros Alkiviadis
+ * @author Rousas Christos
+ *
+ * activity for sign up
+ */
 public class SignUpActivity extends AppCompatActivity implements SignUpView {
 
     private SignUpViewModel viewModel;
@@ -58,6 +62,10 @@ public class SignUpActivity extends AppCompatActivity implements SignUpView {
         });
     }
 
+    /**
+     * this method is called when the candidate clicks the register button.
+     * With the help of the method onSignUp checks if everything follows certain rules.
+     */
     private void register(){
         String firstName = edtFirstName.getText().toString();
         String lastName = edtLastName.getText().toString();
