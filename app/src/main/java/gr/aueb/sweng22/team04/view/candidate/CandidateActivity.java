@@ -127,8 +127,4 @@ public class CandidateActivity extends AppCompatActivity implements CandidateVie
         fad.putExtra("password",candidatePresenter.getPassword());
         startActivity(fad);
     }
-
-
-
-
 }

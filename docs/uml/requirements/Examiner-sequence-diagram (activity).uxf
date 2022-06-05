@@ -1,0 +1,105 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLGeneric&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;450&lt;/x&gt;&lt;y&gt;1256&lt;/y&gt;&lt;w&gt;20&lt;/w&gt;&lt;h&gt;80&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;220&lt;/x&gt;&lt;y&gt;240&lt;/y&gt;&lt;w&gt;250&lt;/w&gt;&lt;h&gt;40&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=&amp;lt;-
+getPresenter()&lt;/panel_attributes&gt;&lt;additional_attributes&gt;230;20;10;20&lt;/additional_attributes&gt;&lt;/element&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;220&lt;/x&gt;&lt;y&gt;270&lt;/y&gt;&lt;w&gt;250&lt;/w&gt;&lt;h&gt;40&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=&amp;lt;.
+presenter&lt;/panel_attributes&gt;&lt;additional_attributes&gt;10;20;230;20&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;270&lt;/x&gt;&lt;y&gt;240&lt;/y&gt;&lt;w&gt;250&lt;/w&gt;&lt;h&gt;40&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=&amp;lt;-
+getPresenter()&lt;/panel_attributes&gt;&lt;additional_attributes&gt;230;20;10;20&lt;/additional_attributes&gt;&lt;/element&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;270&lt;/x&gt;&lt;y&gt;270&lt;/y&gt;&lt;w&gt;250&lt;/w&gt;&lt;h&gt;40&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=&amp;lt;.
+presenter&lt;/panel_attributes&gt;&lt;additional_attributes&gt;10;20;230;20&lt;/additional_attributes&gt;&lt;/element&gt;&lt;element&gt;&lt;id&gt;UMLGeneric&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;500&lt;/x&gt;&lt;y&gt;250&lt;/y&gt;&lt;w&gt;20&lt;/w&gt;&lt;h&gt;60&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;Space for diagram notes</help_text><element><id>UMLActor</id><coordinates><x>0</x><y>0</y><w>80</w><h>110</h></coordinates><panel_attributes>Examiner</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>30</x><y>90</y><w>30</w><h>1550</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;1530</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>170</x><y>40</y><w>100</w><h>30</h></coordinates><panel_attributes>View</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>60</y><w>30</w><h>1560</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;1540</additional_attributes></element><element><id>Relation</id><coordinates><x>30</x><y>140</y><w>200</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+search candidate (button)</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>210</x><y>110</y><w>20</w><h>1460</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>170</y><w>190</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+findCandidate()</panel_attributes><additional_attributes>10;60;90;60;90;10;10;10</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>550</x><y>40</y><w>100</w><h>30</h></coordinates><panel_attributes>Presenter</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>60</y><w>30</w><h>1510</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;1490</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>590</x><y>300</y><w>20</w><h>230</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>310</y><w>390</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+onFindCandidate(firstname, lastname)</panel_attributes><additional_attributes>370;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>410</x><y>40</y><w>100</w><h>30</h></coordinates><panel_attributes>View Model</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>60</y><w>30</w><h>1510</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;1490</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>240</y><w>250</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+getPresenter()</panel_attributes><additional_attributes>230;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>450</x><y>250</y><w>20</w><h>60</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>270</y><w>250</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+presenter</panel_attributes><additional_attributes>10;20;230;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>690</x><y>240</y><w>100</w><h>30</h></coordinates><panel_attributes>Candidate DAO</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>730</x><y>260</y><w>30</w><h>250</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;230</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>730</x><y>331</y><w>20</w><h>100</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>340</y><w>150</w><h>60</h></coordinates><panel_attributes>lt=&lt;-
+findCandidate
+ToMark(firstname
+lastname)</panel_attributes><additional_attributes>130;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>390</y><w>150</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+candidate</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>90</x><y>380</y><w>530</w><h>680</h></coordinates><panel_attributes>alt
+--
+[if candidate == null]
+
+
+
+
+-.
+[if candidate != null]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[if examiner != null]
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>410</y><w>390</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+
+showCandidateNotFound()</panel_attributes><additional_attributes>10;20;370;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>500</y><w>390</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+candidate</panel_attributes><additional_attributes>10;20;370;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>430</y><w>390</w><h>50</h></coordinates><panel_attributes>lt=&lt;.
+
+null</panel_attributes><additional_attributes>10;20;370;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>600</y><w>150</w><h>60</h></coordinates><panel_attributes>lt=&lt;-
+setText()</panel_attributes><additional_attributes>10;40;90;40;90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>640</y><w>250</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+getPresenter()</panel_attributes><additional_attributes>230;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>670</y><w>250</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+presenter</panel_attributes><additional_attributes>10;20;230;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>450</x><y>650</y><w>20</w><h>60</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>590</x><y>710</y><w>20</w><h>140</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>720</y><w>390</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+onFindExaminer(ExaminerID)</panel_attributes><additional_attributes>370;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>750</x><y>680</y><w>100</w><h>30</h></coordinates><panel_attributes>Examiner DAO</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>790</x><y>700</y><w>30</w><h>280</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;260</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>790</x><y>746</y><w>20</w><h>80</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>750</y><w>200</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+findExaminer(ExaminerID)</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>780</y><w>200</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+examiner</panel_attributes><additional_attributes>10;20;180;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>800</y><w>390</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+examiner</panel_attributes><additional_attributes>10;20;370;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>830</x><y>480</y><w>100</w><h>30</h></coordinates><panel_attributes>Candidate</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>496</y><w>30</w><h>180</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>530</y><w>670</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+candidate.getName()</panel_attributes><additional_attributes>650;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>550</y><w>670</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+name</panel_attributes><additional_attributes>10;20;650;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>570</y><w>670</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+candidate.getLastName()</panel_attributes><additional_attributes>650;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>580</y><w>670</w><h>50</h></coordinates><panel_attributes>lt=&lt;.
+
+lastname</panel_attributes><additional_attributes>10;20;650;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>870</x><y>536</y><w>20</w><h>90</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>850</x><y>810</y><w>100</w><h>30</h></coordinates><panel_attributes>Examiner</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>860</y><w>690</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+examiner.getAcademicRole()</panel_attributes><additional_attributes>670;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>890</x><y>866</y><w>20</w><h>70</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>850</x><y>810</y><w>100</w><h>30</h></coordinates><panel_attributes>Examiner</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>890</x><y>826</y><w>30</w><h>150</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>930</x><y>860</y><w>100</w><h>30</h></coordinates><panel_attributes>Lesson</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>980</x><y>876</y><w>30</w><h>160</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>980</x><y>940</y><w>20</w><h>50</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>890</y><w>690</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+academicRole</panel_attributes><additional_attributes>10;20;670;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>930</y><w>780</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+academicRole.getLessonName()</panel_attributes><additional_attributes>760;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>950</y><w>780</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+LessonName</panel_attributes><additional_attributes>10;20;760;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>980</y><w>150</w><h>60</h></coordinates><panel_attributes>lt=&lt;-
+setText()</panel_attributes><additional_attributes>10;40;90;40;90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>450</y><w>150</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+setText()</panel_attributes><additional_attributes>10;30;90;30;90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>30</x><y>1100</y><w>200</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+mark Candidate (button)</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>160</x><y>1080</y><w>360</w><h>500</h></coordinates><panel_attributes>alt
+--
+[if mark.isEmpty() == true]
+
+
+
+
+
+
+
+-.
+[if candidate != null]
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>1120</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+emptyMark()</panel_attributes><additional_attributes>10;30;90;30;90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>1160</y><w>150</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+setText()</panel_attributes><additional_attributes>10;30;90;30;90;10;10;10</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>450</x><y>1256</y><w>20</w><h>70</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>1256</y><w>250</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+getPresenter()</panel_attributes><additional_attributes>230;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>1276</y><w>250</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+presenter</panel_attributes><additional_attributes>10;20;230;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>1330</y><w>390</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+onSaveMark(examiner, candidate, mark)</panel_attributes><additional_attributes>370;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>590</x><y>1342</y><w>20</w><h>170</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLFrame</id><coordinates><x>530</x><y>1320</y><w>360</w><h>210</h></coordinates><panel_attributes>alt
+--
+[if mark &lt; 0 || mark &gt; 20]
+
+
+-.
+[else]
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>1361</y><w>390</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+invalidMark()</panel_attributes><additional_attributes>10;20;370;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>1390</y><w>150</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+setText()</panel_attributes><additional_attributes>10;30;90;30;90;10;10;10</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>920</x><y>1329</y><w>100</w><h>30</h></coordinates><panel_attributes>Marked Lesson</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>960</x><y>1356</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>960</x><y>1382</y><w>20</w><h>100</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>1420</y><w>380</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+markedLesson(acedemicRole, mark, examiner, id)</panel_attributes><additional_attributes>360;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>1436</y><w>380</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+markedLesson</panel_attributes><additional_attributes>10;20;360;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>1030</x><y>1400</y><w>110</w><h>30</h></coordinates><panel_attributes>MarkedLesson DAO</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1080</x><y>1426</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;110;10;90</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>1078</x><y>1466</y><w>20</w><h>60</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>1470</y><w>500</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+addMarkedLesson(markedLesson)</panel_attributes><additional_attributes>480;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>1481</y><w>390</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+saveMarkStatus()</panel_attributes><additional_attributes>10;20;370;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>1520</y><w>150</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+setText()</panel_attributes><additional_attributes>10;30;90;30;90;10;10;10</additional_attributes></element></diagram>

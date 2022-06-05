@@ -21,9 +21,13 @@ public class FindDepartmentPresenter {
         return departmentDAO;
     }
 
-    public String onFindDepartment(int id)
-    {
+    public void onFindDepartment(int id) {
         Department department = this.departmentDAO.findDepartment(id);
-        return department.getDepartmentName()+" with id "+department.getDepartmentID();
+
+        if(department == null){
+            view.showDepartmentNotFound();
+        }else{
+            view.showDepartment(department.getDepartmentName()+" with id "+department.getDepartmentID());
+        }
     }
 }

@@ -49,15 +49,21 @@ public class FindDepartmentActivity extends AppCompatActivity implements FindDep
 
         btnFindDepartment.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) { showDepartment(); }
+            public void onClick(View view) {
+                String id = edtID.getText().toString();
+                presenter.onFindDepartment(Integer.parseInt(id));
+            }
         });
-
     }
+
     @Override
-    public void showDepartment()
+    public void showDepartment(String temp)
     {
-        String id = edtID.getText().toString();
-        txtDepartment.setText(String.valueOf(presenter.onFindDepartment(Integer.parseInt(id))));
+        txtDepartment.setText(temp);
     }
 
+    @Override
+    public void showDepartmentNotFound() {
+        txtDepartment.setText("Department with this id not found");
+    }
 }
