@@ -1,0 +1,64 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>130</x><y>80</y><w>160</w><h>30</h></coordinates><panel_attributes>AppCompatActivity</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>480</y><w>240</w><h>50</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+FindAvailableDepartmentView</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>40</y><w>200</w><h>30</h></coordinates><panel_attributes>androidx.lifecycle.ViewModel
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>240</y><w>290</w><h>200</h></coordinates><panel_attributes>FindAvailableDepartmentPresenter
+--
+- view:FindAvailableDepartmentsView
+- candidateDAO:CandidateDAO
+- departmentDAO:DepartmentDAO
+- email:String
+- password:String
+--
++ setView(view: FindAvailableDepartments):void
++ setCandidateDAO(candidateDAO:CandidateDAO):void
++ setDepartmentDAO(departmentDAO:DepartmentDAO):void
++ setEmail(email:String):void
++ setPassword(password:String):void
++onFindAvailableDepartments():List
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>200</y><w>270</w><h>140</h></coordinates><panel_attributes>FindAvailableDepartmentActivity
+--
++ presenter FindAvailableDepartmentsPresenter
++ viewmodel: FindAvailableDepartmentsViewModel
++ candidatePresenter:CandidatePresenter
+- btnFindAvailableDeapartments: Button
+- txtFindDeps: TextView
+- recyclerView: RecyclerView
+--
++ onCreate(savedInstanceState: Bundle):void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>470</y><w>270</w><h>50</h></coordinates><panel_attributes>&lt;&lt;layout&gt;&gt;
+activity_find_available_departments.xml</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>100</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>556</x><y>60</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>316</x><y>120</y><w>230</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+-viewmodel
+1</panel_attributes><additional_attributes>204;20;10;20;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>124</x><y>330</y><w>80</w><h>160</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;inflates&gt;&gt;</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>314</x><y>330</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>455</x><y>600</y><w>320</w><h>130</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+CandidateDAO
+--
+addCandidate(entity:Candidate):void
+findCandidate(email:String, password:String):Candidate
+findCandidateToMark(firstName:String,lastName:String)
+findAll():List
+delete(candidate:Candidate):void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>920</x><y>470</y><w>250</w><h>110</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+DepartmentDAO
+--
+addDeparment(entity:Department):void
+findDepartment(ID:Int):Department
+findAll():List
+delete(department:Department):void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>430</y><w>110</w><h>190</h></coordinates><panel_attributes>lt=&lt;-
+-candidateDAO
+1</panel_attributes><additional_attributes>10;170;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>390</y><w>260</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+-departmentDAO
+1</panel_attributes><additional_attributes>150;80;150;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>100</y><w>330</w><h>110</h></coordinates><panel_attributes>FindAvilabelDepartmentsViewModel
+--
+presenter:FindAvailableDepartmentPresenter
+
+--
++ FindAvailableDepartmentsViewModel()
++ getPresenter(): FindAvailableDepartmentsPresenter
+# onCleared():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>777</x><y>150</y><w>240</w><h>220</h></coordinates><panel_attributes>lt=&lt;-
+-presenter
+1</panel_attributes><additional_attributes>10;200;170;200;170;10;70;10</additional_attributes></element></diagram>

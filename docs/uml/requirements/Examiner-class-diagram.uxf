@@ -65,13 +65,13 @@ CandidateDAO
 addCandidate(entity:Candidate):void
 findCandidate(email:String, password:String):Candidate
 findCandidateToMark(firstName:String,lastName:String)
-findAll():List&lt;Candidate&gt;
+findAll():List
 delete(candidate:Candidate):void
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>880</x><y>730</y><w>250</w><h>120</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 MarkedLessonDAO
 --
 addMarkedLesson(entity:MarkedLesson):void
-findAll():LIst&lt;MarkedLesson&gt;
+findAll():LIst
 delete(markedLesson):void
 
 
@@ -80,7 +80,7 @@ ExaminerDAO
 --
 addExaminer(entity:Examiner):void
 findExaminer(email:String, password:String):Examiner
-findAll():List&lt;Examiner&gt;
+findAll():List
 delete(examiner:Examiner):void
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>500</x><y>60</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>250</y><w>80</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
 -presenter
@@ -89,7 +89,7 @@ ScientificFieldDAO
 --
 addSeientificField(entity:ScientificField):void
 findScientificField(email:String, password:String):ScientificField
-findAll():List&lt;ScientificField&gt;
+findAll():List
 delete(scientificField:ScientificField):void
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>620</y><w>110</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
 -candidateDAO
