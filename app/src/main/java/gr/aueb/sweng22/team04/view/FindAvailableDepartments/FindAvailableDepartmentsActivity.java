@@ -31,19 +31,13 @@ import java.util.List;
 
 public class FindAvailableDepartmentsActivity extends AppCompatActivity implements FindAvailableDepartmentsView {
 
-
     FindAvailableDepartmentsPresenter presenter;
     FindAvailableDepartmentsViewModel viewmodel;
-
     CandidatePresenter candidatePresenter;
-
 
     private Button btnFindAvailDepartments;
     private TextView txtFindDeps;
     private RecyclerView recyclerView;
-
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -56,14 +50,12 @@ public class FindAvailableDepartmentsActivity extends AppCompatActivity implemen
         presenter.setView(this);
         candidatePresenter = candidateViewModel.getPresenter();
 
-        Initializer initializer = new MemoryInitializer();
-        initializer.prepareData();
+        //Initializer initializer = new MemoryInitializer();
+        //initializer.prepareData();
 
         Bundle extras = getIntent().getExtras();
         String candidateEmail = extras.getString("email");
         String candidatePassword = extras.getString("password");
-
-
 
         candidatePresenter.setEmail(candidateEmail);
         candidatePresenter.setPassword(candidatePassword);
@@ -71,25 +63,18 @@ public class FindAvailableDepartmentsActivity extends AppCompatActivity implemen
         presenter.setEmail(candidateEmail);
         presenter.setPassword(candidatePassword);
 
-
         txtFindDeps = findViewById(R.id.ShowAvailableDepartments);
         btnFindAvailDepartments = findViewById(R.id.FindAvailableDepartments);
 
-        recyclerView = findViewById(R.id.AvailableDepartmentsRecyclerView);
+        List<Department> departmentList = new ArrayList<>();
+        departmentList.addAll(viewmodel.getPresenter().onFindAvailableDepartments());
+
+        recyclerView = (RecyclerView) findViewById(R.id.AvailableDepartmentsRecyclerView);
         //FindAvailableDepartments on click
-
-        List<Department> departmentList = new ArrayList<>(viewmodel.getPresenter().onFindAvailableDepartments());
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
-        recyclerView.setLayoutManager(layoutManager);
-
-        recyclerView.setAdapter(new FindAvailableDepartmentsAdapter(departmentList));
-
-
-
-
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        FindAvailableDepartmentsAdapter adapter = new FindAvailableDepartmentsAdapter(departmentList, this);
+        recyclerView.setAdapter(adapter);
     }
-
-
 }
 
 

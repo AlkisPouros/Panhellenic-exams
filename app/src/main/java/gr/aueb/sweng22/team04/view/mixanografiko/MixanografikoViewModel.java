@@ -20,7 +20,6 @@ public class MixanografikoViewModel extends ViewModel {
         mixanografikoPresenter.setCandidateDAO(new CandidateDAOMemory());
         mixanografikoPresenter.setRegisteredDepartmentDAO(new RegisteredDepartmentDAOMemory());
         mixanografikoPresenter.setDepartmentDAO(new DepartmentDAOMemory());
-
     }
 
     public MixanografikoPresenter getMixanografikoPresenter(){return mixanografikoPresenter;}
