@@ -57,39 +57,29 @@ public class MixanografikoPresenter {
     }
 
     public void setPassword(String password) { this.password = password; }
+
     public MixanografikoDAO getMixanografikoDAO()
     {
         return mixanografikoDAO;
     }
 
-
     public ArrayList<RegisteredDepartment> onRegisterDepartments()
     {
         Candidate candidate = this.getCandidateDAO().findCandidate(email,password); //see CandidatePresenter to be checked again
 
-        //Log.d("email and password: ",email+" "+password);
-        //if(candidate==null) Log.d("my error ","my error");
-
-        //Log.d("email and password: ",candidate.getEmail()+" "+candidate.getPassword());
-
         int counter = 0;
 
-
-
-        for(Department department : candidate.getAvailableDepartmentperUser())
-        {
+        for(Department department : candidate.getAvailableDepartmentperUser()) {
             counter++;  // the new department's position in Mixanografiko
             RegisteredDepartment registeredDepartment = new RegisteredDepartment(counter,department);
             this.mixanografikoDAO.findMixanografiko(candidate.getIdNumber()).getRegisteredDepartments().add(registeredDepartment);
             this.registeredDepartmentDAO.addRegisteredDepartment(registeredDepartment); // Adding these new submitted departments to the memory
-
         }
-        if(this.mixanografikoDAO.findMixanografiko(candidate.getIdNumber()).getRegisteredDepartments().size()<0)
+
+        if(this.mixanografikoDAO.findMixanografiko(candidate.getIdNumber()).getRegisteredDepartments().size() < 0){
             return null;
-        else
+        }else{
             return this.mixanografikoDAO.findMixanografiko(candidate.getIdNumber()).getRegisteredDepartments();
+        }
     }
-
-
-
 }

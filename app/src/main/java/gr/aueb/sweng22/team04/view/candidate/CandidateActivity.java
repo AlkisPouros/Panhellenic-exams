@@ -54,20 +54,18 @@ public class CandidateActivity extends AppCompatActivity implements CandidateVie
         candidatePresenter.setEmail(Candidate_email);
         candidatePresenter.setPassword(Candidate_password);
 
-
-
-        btnCalculateMarks = findViewById(R.id.CalculateMarks);
+        btnCalculateMarks = (Button) findViewById(R.id.CalculateMarks);
         txtCandidateMark = findViewById(R.id.CandidateMark);
-        btnCreateMixanografiko = findViewById(R.id.CreateMixanografiko);
-        btnFindDepartment = findViewById(R.id.FindDepartment);
-        btnFindAvailableDepartments = findViewById(R.id.FindAvailableDepartments);
-
+        btnCreateMixanografiko = (Button) findViewById(R.id.CreateMixanografiko);
+        btnFindDepartment = (Button) findViewById(R.id.FindDepartment);
+        btnFindAvailableDepartments = (Button) findViewById(R.id.FindAvailableDepartments);
 
 
         btnCalculateMarks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { showCandidateMark(); }
         });
+
         btnCreateMixanografiko.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,12 +78,13 @@ public class CandidateActivity extends AppCompatActivity implements CandidateVie
             public void onClick(View view) {
                 findDepartment();
             }
-
         });
 
         btnFindAvailableDepartments.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){ findAvailableDepartments(); }
+            public void onClick(View view){
+                findAvailableDepartments();
+            }
         });
     }
 

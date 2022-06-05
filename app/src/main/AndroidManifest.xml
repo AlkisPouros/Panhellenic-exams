@@ -15,9 +15,9 @@
             android:exported="false" />
         <activity android:name=".view.FindAvailableDepartments.FindAvailableDepartmentsActivity"
             android:exported="false"/>
-        <activity android:name=".view.FindDepartment.FindDepartmentActivity"
+        <activity android:name="gr.aueb.sweng22.team04.view.FindDepartment.FindDepartmentActivity"
             android:exported="false"/>
-        <activity android:name=".view.mixanografiko.MixanografikoActivity"
+        <activity android:name="gr.aueb.sweng22.team04.view.mixanografiko.MixanografikoActivity"
             android:exported="false"/>
         <activity
             android:name="gr.aueb.sweng22.team04.view.login.signUp.SignUpActivity"

@@ -1,5 +1,6 @@
 package gr.aueb.sweng22.team04.view.Adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,35 +14,28 @@ import java.util.List;
 import gr.aueb.sweng22.team04.R;
 import gr.aueb.sweng22.team04.model.Department;
 
-public class FindAvailableDepartmentsAdapter extends RecyclerView.Adapter<FindAvailableDepartmentsAdapter.DepartmentViewHolder>{
-
+public class FindAvailableDepartmentsAdapter extends RecyclerView.Adapter{
 
     private List<Department> dataSourceList;
+    private Context context;
 
-
-    public FindAvailableDepartmentsAdapter(List<Department> dataSourceList) {
-
+    public FindAvailableDepartmentsAdapter(List<Department> dataSourceList, Context context) {
         this.dataSourceList = dataSourceList;
+        this.context = context;
     }
 
     @NonNull
     @Override
-    public FindAvailableDepartmentsAdapter.DepartmentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-        return new DepartmentViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.department_item, parent, false));
-
-
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view;
+        view = LayoutInflater.from(parent.getContext()).inflate(R.layout.department_item, parent, false);
+        return new DepartmentViewHolder(view);
     }
 
-
-
-
     @Override
-    public void onBindViewHolder(@NonNull FindAvailableDepartmentsAdapter.DepartmentViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         final Department currentItem = dataSourceList.get(position);
-        holder.txtItemId.setText(String.valueOf(currentItem.getDepartmentID()));
-        holder.txtItemName.setText(String.valueOf(currentItem.getDepartmentName()));
-
+        ((DepartmentViewHolder) holder).bind(currentItem);
     }
 
     @Override
@@ -49,23 +43,19 @@ public class FindAvailableDepartmentsAdapter extends RecyclerView.Adapter<FindAv
         return this.dataSourceList.size();
     }
 
-    public static class DepartmentViewHolder extends RecyclerView.ViewHolder
-    {
+    public class DepartmentViewHolder extends RecyclerView.ViewHolder {
         public TextView txtItemId; //final
         public TextView txtItemName; // final
 
-        public DepartmentViewHolder(View view)
-        {
+        public DepartmentViewHolder(View view) {
             super(view);
-            txtItemId = view.findViewById(R.id.DepartmentName);
-            txtItemName = view.findViewById(R.id.DepartmentID);
-
+            txtItemId = view.findViewById(R.id.txt_item_id);
+            txtItemName = view.findViewById(R.id.txt_item_title);
         }
 
-
-
+        void bind(Department department){
+            txtItemId.setText(String.valueOf(department.getDepartmentID()));
+            txtItemName.setText(String.valueOf(department.getDepartmentName()));
+        }
     }
-
-
-
 }

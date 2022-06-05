@@ -16,11 +16,9 @@ import gr.aueb.sweng22.team04.model.Department;
 
 public class FindAvailableDepartmentsPresenter {
 
-
     private FindAvailableDepartmentsView view;
     private CandidateDAO candidateDAO;
     private DepartmentDAO departmentDAO;
-
     private String email;
     private String password;
 
@@ -52,19 +50,14 @@ public class FindAvailableDepartmentsPresenter {
         this.password = password;
     }
 
-
     public ArrayList<Department> onFindAvailableDepartments() {
-
-
         Candidate candidate = this.getCandidateDAO().findCandidate(email, password);
 
         for (Department department : this.departmentDAO.findAll()) {
             if (candidate.getMoria() >= department.getEBE() && candidate.getField().getName().equals(department.getField().getName())) {
                 candidate.getAvailableDepartmentperUser().add(department);
-
             }
         }
         return candidate.getAvailableDepartmentperUser();
-
     }
 }

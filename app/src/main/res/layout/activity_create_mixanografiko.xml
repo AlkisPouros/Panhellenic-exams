@@ -16,14 +16,17 @@
         app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtRegisterDepartments"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/txtRegisterDepartments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="108dp"
+        android:layout_marginBottom="89dp"
         android:text="Register Departments"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,26 +34,12 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="300dp"
-        android:layout_height="470dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="409dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterDepartments"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:ignore="ExtraText">
-
-        <TextView
-            android:id="@+id/RegisteredDepartmentID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Registered department ID" />
-
-        <TextView
-            android:id="@+id/RegisteredDepartmentName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Registered department Name" />
-    </androidx.recyclerview.widget.RecyclerView>
+        app:layout_constraintTop_toBottomOf="@+id/txtRegisterDepartments" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

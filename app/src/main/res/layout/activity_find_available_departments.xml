@@ -7,54 +7,36 @@
 
     <Button
         android:id="@+id/FindAvailableDepartments"
-        android:layout_width="181dp"
-        android:layout_height="87dp"
-        android:layout_marginBottom="44dp"
+        android:layout_width="222dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="21dp"
         android:text="Find Available Departments"
         app:layout_constraintBottom_toTopOf="@+id/AvailableDepartmentsRecyclerView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ShowAvailableDepartments"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/ShowAvailableDepartments" />
 
     <TextView
         android:id="@+id/ShowAvailableDepartments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
         android:layout_marginTop="28dp"
+        android:layout_marginBottom="1dp"
         android:text="Show Available Departments"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/FindAvailableDepartments"
+        app:layout_constraintStart_toStartOf="@+id/FindAvailableDepartments"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/AvailableDepartmentsRecyclerView"
-        android:layout_width="208dp"
-        android:layout_height="486dp"
-
-
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintVertical_bias="0.775">
-
-
-        <TextView
-            android:id="@+id/DepartmentName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Department Name" />
-
-        <TextView
-            android:id="@+id/DepartmentID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Department ID" />
-    </androidx.recyclerview.widget.RecyclerView>
+        app:layout_constraintTop_toBottomOf="@+id/FindAvailableDepartments" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

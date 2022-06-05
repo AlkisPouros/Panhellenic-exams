@@ -27,11 +27,9 @@ public class MixanografikoActivity extends AppCompatActivity implements Mixanogr
     CandidatePresenter candidatePresenter;
 
     private MixanografikoViewModel viewModel;
-
     private Button btnRegisterDepartments;
     private TextView txtRegisterDepartments;
     private RecyclerView recyclerView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -44,14 +42,12 @@ public class MixanografikoActivity extends AppCompatActivity implements Mixanogr
         presenter.setView(this);
         candidatePresenter = candidateViewModel.getPresenter();
 
-        Initializer initializer = new MemoryInitializer();
-        initializer.prepareData();
+        //Initializer initializer = new MemoryInitializer();
+        //initializer.prepareData();
 
         Bundle extras = getIntent().getExtras();
         String candidateEmail = extras.getString("email");
         String candidatePassword = extras.getString("password");
-        //Log.d("email and password: ",candidateEmail+" "+candidatePassword);
-
 
 
         candidatePresenter.setEmail(candidateEmail);
@@ -60,21 +56,18 @@ public class MixanografikoActivity extends AppCompatActivity implements Mixanogr
         presenter.setEmail(candidateEmail);
         presenter.setPassword(candidatePassword);
 
+        btnRegisterDepartments = (Button) findViewById(R.id.RegisterDepartments);
+        txtRegisterDepartments =  findViewById(R.id.txtRegisterDepartments);
 
-        btnRegisterDepartments = findViewById(R.id.RegisterDepartments);
-        txtRegisterDepartments = findViewById(R.id.txtRegisterDepartments);
-        recyclerView = findViewById(R.id.recyclerView);
+        List<RegisteredDepartment> departmentList = new ArrayList<>();
+        departmentList.addAll(presenter.onRegisterDepartments());
+
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         //RegisterDepartments button on click
-
-        List<RegisteredDepartment> departmentList = new ArrayList<>(viewModel.getMixanografikoPresenter().onRegisterDepartments());
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        recyclerView.setAdapter(new RegisteredDepartmentAdapter(departmentList));
-
+        RegisteredDepartmentAdapter adapter = new RegisteredDepartmentAdapter(departmentList, this);
+        recyclerView.setAdapter(adapter);
     }
-
-
-
 }
 
 
